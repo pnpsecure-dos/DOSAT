@@ -41,3 +41,8 @@ class TC_test(unittest.TestCase):
     def test_TC14_12_8_rmdir(self):
         rtn = os.system('python ./src/TC14_12_8_rmdir.py')
         self.assertEqual(rtn,0)
+
+    def test_TC14_36(self):
+        sleep(60)
+        rtn = os.system('python ./src/TC14_36.py')
+        self.assertEqual(rtn,0)
