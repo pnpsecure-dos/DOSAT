@@ -1,7 +1,7 @@
 import sys
 import dbcon
 from dbcon import DBCtrl
-
+#test
 columns=["policy_name"]
 tc_list=["TC14_12_1", "TC14_12_2", "TC14_12_3", "TC14_12_4", "TC14_12_5", "TC14_12_6", "TC14_12_7", "TC14_12_8"]
 
