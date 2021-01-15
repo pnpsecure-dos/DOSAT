@@ -5,11 +5,11 @@ from time import sleep
 class TC_test(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
- #       os.system('python ./src/TC14_init.py')
+        print("set")
 
     @classmethod
     def tearDownClass(cls):
-        print("")
+        print("tear")
 
     def test_TC14_08(self):
         rtn = 0
