@@ -1,11 +1,16 @@
 import sys
-
+from glob import glob
 from fac_def import *
 from dbcon import DBCtrl
 
 #test
 columns=["policy_name"]
-tc_list=["TC14_12_1", "TC14_12_2", "TC14_12_3", "TC14_12_4", "TC14_12_5", "TC14_12_6", "TC14_12_7", "TC14_12_8"]
+file_list = sorted(glob("TC14_*"))[:-1]
+tc_list = []
+
+for tc in file_list:
+	#remove '.py'
+	tc_list.append(tc[:-3])	
 
 dt = nowDate()
 
@@ -16,7 +21,6 @@ ret = dbs.select("dbsafer_log_%s_%s"%(dt['year'],dt['month']),"access_file_%s"%d
 db_pm = sum(ret, [])
 print(db_pm)
 
-"""
 result = "false"
 tc_result = "true"
 for tc_num in tc_list :
@@ -33,5 +37,5 @@ for tc_num in tc_list :
         print(tc_num,"fail")
         tc_result = "false"
 if tc_result == "false" :
-    sys.exit(99)
-"""
+    sys.exit(-1)
+

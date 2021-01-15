@@ -10,7 +10,7 @@ if os.path.isfile(path) == False:
 	f = open(path, 'w')
 	f.write("TC14_12_3_read test file")
 	f.close()	
-
+	
 try:
 	f = open(path, 'r')
 	f.read(10)
@@ -21,7 +21,8 @@ except Exception as e:
 sleep(1)
 
 if logCheck(tc_num) == policy_status :
-        print("true")
+	print("true")
+	sys.exit(0)
 else :
-        print("fail")
-        sys.exit(99)
+	print("fail")
+	sys.exit(-1)

@@ -16,7 +16,8 @@ os.system("mv /home/fac_test_dir/%s_re /home/fac_test_dir/%s"%(tc_num,tc_num))
 
 sleep(1)
 if logCheck(tc_num) == policy_status :
-        print("true")
-else :
-        print("fail")
-        sys.exit(99)
+	print("true")
+	sys.exit(0)
+else:
+	print("fail")
+	sys.exit(-1)

@@ -14,12 +14,12 @@ try:
 	os.remove("/home/fac_test_dir/%s"%tc_num)
 except Exception as e:
 	print(e)
-
 sleep(1)
 
 if logCheck(tc_num) == policy_status :
-        print("true")
+	print("true")
+	sys.exit(0)
 else :
-        print("fail")
-        sys.exit(99)
+	print("fail")
+	sys.exit(-1)
 

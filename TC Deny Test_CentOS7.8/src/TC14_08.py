@@ -11,8 +11,9 @@ sleep(0.5)
 
 if logCheck(tc_num) == policy_status:
 	print("true")
+	sys.exit(0)
 else:
 	print("fail")
-	sys.exit(99)
+	sys.exit(-1)
 
 
