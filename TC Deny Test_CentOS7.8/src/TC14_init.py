@@ -9,11 +9,19 @@ dt = nowDate()
 if policy_status == "ALLOW":
 	dbExecute("dbsafer3","update %s set enabled=1;"%(tb_fac))
 	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate access_file_%s;"%dt['day'])
+	
+	dbExecute("dbsafer3","update %s set enabled=1;"%(tb_tcp_ctrl))
+	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate etc_acl_%s;"%dt['day'])
+
 elif policy_status == "DENY":
 	sql = "update {0} set enabled=0 where name not like '{1}'"
 	dbExecute("dbsafer3", "update %s set enabled=1;"%tb_fac)
 	dbExecute("dbsafer3", sql.format(tb_fac, '%deny'))
 	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate access_file_%s;"%dt['day'])
+
+	dbExecute("dbsafer3", "update %s set enabled=1;"%tb_tcp_ctrl)
+	dbExecute("dbsafer3", sql.format(tb_tcp_ctrl, '%deny'))
+	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate etc_acl_%s;"%dt['day'])
 
 #send to server_manager
 usock = skt.socket(skt.AF_INET, skt.SOCK_DGRAM)
