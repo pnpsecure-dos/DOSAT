@@ -14,6 +14,7 @@ pwd = "dbsafer00"
 tc_num = os.path.basename(__file__).split('.')[0]
 pfclog = "tail -1 /home/pnpsecure/server_agent/addon/pfc/log/pfclog | awk '{print $15}'"
 
+# SSH
 try :
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
@@ -23,7 +24,7 @@ try :
     log_rtn = stdout.read()
 except :
     print("SSH Connect Fail")
-    sys.exit(99)
+    sys.exit(-1)
 
 log_check = log_rtn.decode()
 if tc_num in log_check :
@@ -31,9 +32,9 @@ if tc_num in log_check :
 else :
     print("fail")
     ssh.close()
-    sys.exit(99)
+    sys.exit(-1)
 
-
+# FPT
 try :
     ftp = ftplib.FTP()
     ftp.connect(ip, ftp_port)
@@ -51,8 +52,9 @@ if tc_num in log_check :
 else :
     print("fail")
     ssh.close()
-    sys.exit(99)
+    sys.exit(-1)
 
+# Telnet
 try :
     telnet = telnetlib.Telnet(ip)
     telnet.read_until(b"login: ")
@@ -73,6 +75,6 @@ if tc_num in log_check :
 else :
     print("fail")
     ssh.close()
-    sys.exit(99)
+    sys.exit(-1)
     
 ssh.close()
