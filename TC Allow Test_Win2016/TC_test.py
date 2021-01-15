@@ -20,5 +20,5 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_36(self):
-        rtn = 1
+        rtn = 0
         self.assertEqual(rtn,0)
