@@ -85,7 +85,7 @@ def logCheck(tc_num):
 
         # ACT:'ALLOW/DENY' PNM:'Policy_Name'
 	log_file = os.popen('cat /etc/.pfcpath').read()
-	log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $22}'", log_file).read()
+	log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $22}'" %log_file).read()
 	tmp = re.split('[: ]+',log_check)
 	print(tmp)	
 	pname = tmp[3]
