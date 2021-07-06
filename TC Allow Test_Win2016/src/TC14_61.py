@@ -76,5 +76,8 @@ else :
     print("fail")
     ssh.close()
     sys.exit(99)
-    
+
+#DB 접속
+
+
 ssh.close()
