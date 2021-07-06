@@ -1,4 +1,5 @@
 import socket as skt
+import os
 from time import sleep
 from fac_def import *
 from variables import *
@@ -25,14 +26,15 @@ elif policy_status == "DENY":
 
 #send to server_manager
 usock = skt.socket(skt.AF_INET, skt.SOCK_DGRAM)
-usock.sendto('.'.encode(), (svr_ip,21114
+usock.sendto('.'.encode(), (svr_ip,21114))
 
 ft = ''
 count = 0
+pfcpath = os.popen('cat /etc/.pfcpath').read()
 
 # check conf file update
 while dt['time'] > ft and count < 30:
-	ft = os.popen("ls -al /home/pnpsecure/server_agent/addon/pfc/conf/fac_auth.rules | awk '{print $8}'").read()
+	ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'", pfcpath).read()
 	sleep(1)
 	count +=1
 

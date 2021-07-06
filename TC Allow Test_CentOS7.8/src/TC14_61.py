@@ -12,7 +12,8 @@ telnet_port = 23
 usr = "root"
 pwd = "dbsafer00"
 tc_num = os.path.basename(__file__).split('.')[0]
-pfclog = "tail -1 /home/pnpsecure/server_agent/addon/pfc/log/pfclog | awk '{print $15}'"
+pfcpath = os.popen('cat /etc/.pfcpath').read()
+pfclog = "tail -1 %s/log/pfclog | awk '{print $15}'" %pfcpath
 
 # SSH
 try :
