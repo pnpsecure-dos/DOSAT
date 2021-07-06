@@ -8,10 +8,10 @@ dt = nowDate()
 
 # change policy on/off depending on variables.policy_status
 if policy_status == "ALLOW":
-	dbExecute("dbsafer3","update %s set enabled=1 where name like "TC%";"%(tb_fac))
+	dbExecute("dbsafer3",'update %s set enabled=1 where name like "TC%";'%(tb_fac))
 	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate access_file_%s;"%dt['day'])
 	
-	dbExecute("dbsafer3","update %s set enabled=1 where name like "TC%";"%(tb_tcp_ctrl))
+	dbExecute("dbsafer3",'update %s set enabled=1 where name like "TC%";'%(tb_tcp_ctrl))
 	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate etc_acl_%s;"%dt['day'])
 
 elif policy_status == "DENY":
@@ -34,7 +34,7 @@ pfcpath = os.popen('cat /etc/.pfcpath').read()
 
 # check conf file update
 while dt['time'] > ft and count < 30:
-	ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'", pfcpath).read()
+	ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'" %pfcpath).read()
 	sleep(1)
 	count +=1
 
