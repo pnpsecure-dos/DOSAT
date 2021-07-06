@@ -12,9 +12,9 @@ telnet_port = 23
 usr = "root"
 pwd = "dbsafer00"
 tc_num = os.path.basename(__file__).split('.')[0]
-pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
-pfcpath = pfcpath.strip('\n')
-pfclog = "tail -1 %s/log/pfclog | awk '{print $15}'" %pfcpath
+#pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
+#pfcpath = pfcpath.strip('\n')
+pfclog = "tail -1 /home/pnpsecure/server_agent_CentOS7_64bit_V5.1.4.62_20201119/addon/pfc/log/pfclog | awk '{print $15}'"
 
 # SSH
 try :
