@@ -31,6 +31,7 @@ usock.sendto('.'.encode(), (svr_ip,21114))
 ft = ''
 count = 0
 pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
+pfcpath = pfcpath.strip('\n')
 
 # check conf file update
 while dt['time'] > ft and count < 30:
