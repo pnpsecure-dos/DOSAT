@@ -1,5 +1,5 @@
 db_usr = 'safeusr'
-db_pwd = 'caNbPFvrYZDYIlRrQQEGTvEW7FbXZPTQ3NnOw0lv'
+db_pwd = 'GREPz1Q6zOAZEDQF6Mu4SYOlBJ8JkyGAJhI2WVFG'
 svr_ip = '192.168.105.65'
 svr_usr = 'root'
 svr_pwd = 'dbsafer00'
