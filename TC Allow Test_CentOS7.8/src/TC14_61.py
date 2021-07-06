@@ -12,7 +12,7 @@ telnet_port = 23
 usr = "root"
 pwd = "dbsafer00"
 tc_num = os.path.basename(__file__).split('.')[0]
-pfcpath = os.popen('cat /etc/.pfcpath').read().split('.')[1]
+pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
 pfclog = "tail -1 %s/log/pfclog | awk '{print $15}'" %pfcpath
 
 # SSH
