@@ -12,36 +12,40 @@ telnet_port = 23
 usr = "root"
 pwd = "dbsafer00"
 tc_num = os.path.basename(__file__).split('.')[0]
-pfclog = "tail -1 /home/pnpsecure/server_agent/addon/pfc/log/pfclog | awk '{print $15}'"
 
-#SSH 접속 
+# SSH
 try :
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
     ssh.connect(ip, port=ssh_port, username=usr, password=pwd)
     sleep(1)
-    stdin, stdout, stderr = ssh.exec_command(pfclog)
+    stdin, stdout, stderr = ssh.exec_command("cat /etc/.pfcpath")
+    pfcpath = stdout.read()
+    pfcpath = pfcpath.decode().split('=')[1]
+    pfcpath = pfcpath.strip('\n')
+    stdin, stdout, stderr = ssh.exec_command("tail -1 %s/log/pfclog | awk '{print $15}'" %pfcpath)
     log_rtn = stdout.read()
+    print(log_rtn)
 except :
     print("SSH Connect Fail")
-    sys.exit(99)
-log_rtn.d
+    sys.exit(-1)
+
 log_check = log_rtn.decode()
 if tc_num in log_check :
     print("true")
 else :
     print("fail")
     ssh.close()
-    sys.exit(99)
+    sys.exit(-1)
 
-#FTP 접속
+# FPT
 try :
     ftp = ftplib.FTP()
     ftp.connect(ip, ftp_port)
     ftp.login(usr, pwd)
     ftp.quit()
     sleep(1)
-    stdin, stdout, stderr = ssh.exec_command(pfclog)
+    stdin, stdout, stderr = ssh.exec_command("tail -1 %s/log/pfclog | awk '{print $15}'" %pfcpath)
     log_rtn = stdout.read()
 except :
     print("FTP Connect Fail")
@@ -52,9 +56,9 @@ if tc_num in log_check :
 else :
     print("fail")
     ssh.close()
-    sys.exit(99)
+    sys.exit(-1)
 
-#Telnet 접속
+# Telnet
 try :
     telnet = telnetlib.Telnet(ip)
     telnet.read_until(b"login: ")
@@ -64,7 +68,7 @@ try :
     telnet.write(b"exit\n")
     telnet.close()
     sleep(1)
-    stdin, stdout, stderr = ssh.exec_command(pfclog)
+    stdin, stdout, stderr = ssh.exec_command("tail -1 %s/log/pfclog | awk '{print $15}'" %pfcpath)
     log_rtn = stdout.read()
 except :
     print("Telnet Connect Fail")
@@ -75,9 +79,6 @@ if tc_num in log_check :
 else :
     print("fail")
     ssh.close()
-    sys.exit(99)
-
-#DB 접속
-
-
+    sys.exit(-1)
+    
 ssh.close()
