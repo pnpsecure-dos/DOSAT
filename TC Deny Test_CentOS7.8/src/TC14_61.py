@@ -18,8 +18,6 @@ try :
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
     ssh.connect(ip, port=ssh_port, username=usr, password=pwd)
     sleep(1)
-    stdin, stdout, stderr = ssh.exec_command(pfclog)
-    log_rtn = stdout.read()
 except :
     print("SSH Connect Fail")
 
@@ -30,8 +28,6 @@ try :
     ftp.login(usr, pwd)
     ftp.quit()
     sleep(1)
-    stdin, stdout, stderr = ssh.exec_command(pfclog)
-    log_rtn = stdout.read()
 except :
     print("FTP Connect Fail")
 
@@ -45,7 +41,5 @@ try :
     telnet.write(b"exit\n")
     telnet.close()
     sleep(1)
-    stdin, stdout, stderr = ssh.exec_command(pfclog)
-    log_rtn = stdout.read()
 except :
     print("Telnet Connect Fail")
