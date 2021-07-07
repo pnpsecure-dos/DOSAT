@@ -15,13 +15,12 @@ if policy_status == "ALLOW":
 	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate etc_acl_%s;"%dt['day'])
 
 elif policy_status == "DENY":
-	sql = "update {0} set enabled=0 where name like '{1}' and name like '{2}'"
-	dbExecute("dbsafer3", "update %s set enabled=0;"%tb_fac)
-	dbExecute("dbsafer3", sql.format(tb_fac, 'TC%', '%deny'))
+	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%';"%(tb_fac))
+	dbExecute("dbsafer3", "update %s set enabled=1 where name like 'TC%%' and name like '%%deny';"%(tb_fac))
 	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate access_file_%s;"%dt['day'])
 
-	dbExecute("dbsafer3", "update %s set enabled=0;"%tb_tcp_ctrl)
-	dbExecute("dbsafer3", sql.format(tb_tcp_ctrl, 'TC%', '%deny'))
+	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%';"%(tb_tcp_ctrl))
+	dbExecute("dbsafer3", "update %s set enabled=1 where name like 'TC%%' and name like '%%deny';"%(tb_tcp_ctrl))
 	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"truncate etc_acl_%s;"%dt['day'])
 
 #send to server_manager
