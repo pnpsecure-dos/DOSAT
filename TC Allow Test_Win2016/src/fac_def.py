@@ -23,7 +23,7 @@ def runOnShell(client, cmdlines):
 	dict_ret = {'cmd':cmdlines, 'recv':[]}
 	for cmd in cmdlines:
 		ret = sh.send(cmd+"\n")
-		time.sleep(0.5)
+		sleep(0.5)
 		buf=''
 		while sh.recv_ready():
 			buf = sh.recv(4096)
@@ -88,10 +88,10 @@ def logCheck(tc_num):
     log_path = r"C:\\ProgramData\\PFC\\data"
     status = False
 
-    while count < 2 :
+    while count < 5 :
         log_files = os.listdir(log_path)
         for i in log_files :
-            fp = open(i, 'r', encoding='utf-16')
+            fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
             lines = fp.readlines()
             for line in lines :
                 if tc_num in line :
