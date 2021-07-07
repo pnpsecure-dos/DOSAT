@@ -1,9 +1,10 @@
+from posixpath import dirname
 from variables import *
 import pymysql as py
 import paramiko
 import re
 from time import sleep
-import os, sys
+import os, sys, glob
 from datetime import datetime
 
 def runOnShell(client, cmdlines):
@@ -73,7 +74,7 @@ def nowDate():
 
 
 def logCheck(tc_num):
-	"""check tc_num in pfclog
+    """check tc_num in pfclog
         Args:
                 tc_num(str): test case num = file name
         Return:
@@ -81,18 +82,30 @@ def logCheck(tc_num):
         Raises:
 
         """
-	result = ''
+    # ACT:'ALLOW/DENY' PNM:'Policy_Name'
 
-        # ACT:'ALLOW/DENY' PNM:'Policy_Name'
-	pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
-	pfcpath = pfcpath.strip('\n')
-	log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $22}'" %pfcpath).read()
-	tmp = re.split('[: ]+',log_check)
-	print(tmp)	
-	pname = tmp[3]
-	pstatus = tmp[1]
-	if tc_num in pname:
-        	result = pstatus
-	return result
-	
-	
+    count = 0
+    log_path = r"C:\\ProgramData\\PFC\\data"
+    status = False
+
+    while count < 2 :
+        log_files = os.listdir(log_path)
+        for i in log_files :
+            fp = open(i, 'r', encoding='utf-16')
+            lines = fp.readlines()
+            for line in lines :
+                if tc_num in line :
+                    log_check = line
+                    status = True
+                    break;
+            if status == True :
+                break;
+        if status == True :
+            break;
+        sleep(1)
+        count = count + 1
+
+    log_check_list = log_check.split()
+    pstatus = log_check_list[5].split(':')[1]
+
+    return pstatus

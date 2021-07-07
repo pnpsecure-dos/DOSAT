@@ -6,7 +6,7 @@ from variables import *
 # file name without py
 tc_num = os.path.basename(__file__).split('.')[0]
 
-os.system("cat /home/fac_test_dir/%s"%tc_num)
+os.system("type C:\\fac_test_dir\\%s"%tc_num)
 sleep(0.5)
 
 if logCheck(tc_num) == policy_status:

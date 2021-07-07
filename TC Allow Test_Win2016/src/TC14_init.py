@@ -1,5 +1,5 @@
 import socket as skt
-import os
+import os, time
 from time import sleep
 from fac_def import *
 from variables import *
@@ -30,13 +30,10 @@ usock.sendto('.'.encode(), (svr_ip,21114))
 
 ft = ''
 count = 0
-pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
-pfcpath = pfcpath.strip('\n')
+fac_auth_path = "C:\\ProgramData\\PFC\\conf\\fac_auth.rules"
 
 # check conf file update
 while dt['time'] > ft and count < 60:
-	ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'" %pfcpath).read()
+	ft = time.ctime(os.path.getmtime("C:\\ProgramData\\PFC\\conf\\fac_auth.rules")).split[4]
 	sleep(1)
 	count +=1
-
-

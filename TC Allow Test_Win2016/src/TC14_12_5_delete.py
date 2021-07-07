@@ -4,14 +4,14 @@ from fac_def import *
 from variables import *
 
 tc_num = os.path.basename(__file__).split('.')[0]
-path = "/home/fac_test_dir/%s"%tc_num
+path = "C:\\fac_test_dir\\%s"%tc_num
 
 if os.path.isfile(path) == False:
 	f = open(path,'w')
 	f.write("TC14_12_5_delete test file")
 	f.close()
 try:
-	os.remove("/home/fac_test_dir/%s"%tc_num)
+	os.remove("C:\\fac_test_dir\\%s"%tc_num)
 except Exception as e:
 	print(e)
 sleep(1)

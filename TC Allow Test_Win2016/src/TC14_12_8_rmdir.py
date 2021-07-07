@@ -4,7 +4,7 @@ from fac_def import *
 from variables import *
 
 tc_num = os.path.basename(__file__).split('.')[0]
-path = "/home/fac_test_dir/%s/test"%tc_num
+path = "C:\\fac_test_dir\\%s/test"%tc_num
 
 if os.path.isdir(path) == False:
 	os.mkdir(path)
