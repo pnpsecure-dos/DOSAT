@@ -38,4 +38,4 @@ while dt['time'] > ft and count < 150:
 	sleep(1)
 	count +=1
 
-
+sleep(5)
