@@ -3,7 +3,7 @@ import json
 import inspect
 from logger import *
 
-CONF_PATH = 'C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Allow Test_Win2016\\conf\\dbinfo.conf'
+CONF_PATH = 'C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Deny Test_Win2016\\conf\\dbinfo.conf'
 
 class DBCtrl():
 	"""

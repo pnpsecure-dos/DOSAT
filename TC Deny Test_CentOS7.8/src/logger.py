@@ -12,7 +12,7 @@ class Logger:
 	"""
 	
 	def __init__(self) :
-		f = open("/home/jenkins/workspace/DBSAFER OS/TC Test/conf/logger.conf",'r')
+		f = open("/home/jenkins/sharedspace/DBSAFER_OS/TC Allow Test_CentOS7.8/conf/logger.conf",'r')
 		conf = json.load(f)
 		f.close()
 		logdir = os.path.dirname(conf['handlers']['filelog']['filename'])
