@@ -11,8 +11,8 @@ if os.path.isfile(path) == False:
 	f.write("TC14_12_4_rename test file")
 	f.close() 
 
-os.system("rename C:\\fac_test_dir\\%s C:\\fac_test_dir\\%s_re"%(tc_num,tc_num))
-os.system("rename C:\\fac_test_dir\\%s_re C:\\fac_test_dir\\%s"%(tc_num,tc_num))
+os.system("rename C:\\fac_test_dir\\%s %s_re"%(tc_num,tc_num))
+os.system("rename C:\\fac_test_dir\\%s_re %s"%(tc_num,tc_num))
 
 sleep(1)
 if logCheck(tc_num) == policy_status :

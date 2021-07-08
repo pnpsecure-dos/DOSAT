@@ -87,6 +87,7 @@ def logCheck(tc_num):
     count = 0
     log_path = r"C:\\ProgramData\\PFC\\data"
     status = False
+    pstatus = "N/A"
 
     while count < 5 :
         log_files = os.listdir(log_path)
@@ -98,6 +99,7 @@ def logCheck(tc_num):
                 pname = tmp_line[18].split(':')[1]
                 if tc_num in pname :
                     status = True
+                    pstatus = tmp_line[5].split(':')[1]
                     break;
             if status == True :
                 break;
@@ -105,7 +107,5 @@ def logCheck(tc_num):
             break;
         sleep(1)
         count = count + 1
-
-    pstatus = tmp_line[5].split(':')[1]
 
     return pstatus

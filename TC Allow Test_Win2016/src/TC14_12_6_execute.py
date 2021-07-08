@@ -11,9 +11,7 @@ if os.path.isfile(path) == False:
 	f.write("echo 'TC14_12_6_execute test file'")
 	f.close()
 
-
-os.system("C:\\fac_test_dir\\%s.exe"%tc_num)
-os.system("taskkill /f /im %s.exe"%tc_num)
+os.system("start C:\\fac_test_dir\\%s.exe /t & taskkill /f /im %s.exe"%(tc_num, tc_num))
 
 sleep(1)
 if logCheck(tc_num) == policy_status :
