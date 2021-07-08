@@ -124,6 +124,6 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_36.py')
         self.assertEqual(rtn,0)
 
-#    def test_TC14_61(self):
-#        rtn = os.system('python ./src/TC14_61.py')
-#        self.assertEqual(rtn,0)
+    def test_TC14_61(self):
+        rtn = os.system('python ./src/TC14_61.py')
+        self.assertEqual(rtn,0)
