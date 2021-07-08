@@ -3,6 +3,11 @@ from glob import glob
 from fac_def import *
 from dbcon import DBCtrl
 
+tc_num = os.path.basename(__file__).split('.')[0]
+
+os.system("type C:\\fac_test_dir\\%s"%tc_num)
+sleep(60)
+
 #test
 columns=["policy_name"]
 file_list = sorted(glob("TC14_*"))[:-1]
@@ -23,9 +28,9 @@ print(db_pm)
 
 result = "false"
 tc_result = "true"
-for tc_num in tc_list :
+for tc_num2 in tc_list :
     for line in db_pm :
-        if tc_num in line :
+        if tc_num2 in line :
 #            print("true",tc_num)
             result = "true"
             break
@@ -34,7 +39,7 @@ for tc_num in tc_list :
     if result == "true" :
         continue
     else :
-        print(tc_num,"fail")
+        print(tc_num2,"fail")
         tc_result = "false"
 if tc_result == "false" :
     sys.exit(-1)
