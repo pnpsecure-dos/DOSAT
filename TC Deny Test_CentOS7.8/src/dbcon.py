@@ -3,7 +3,7 @@ import json
 import inspect
 from logger import *
 
-CONF_PATH = '/home/jenkins/sharedspace/DBSAFER_OS/TC Allow Test_CentOS7.8/conf/dbinfo.conf'
+CONF_PATH = '/home/jenkins/sharedspace/DBSAFER_OS/TC Deny Test_CentOS7.8/conf/dbinfo.conf'
 
 class DBCtrl():
 	"""
