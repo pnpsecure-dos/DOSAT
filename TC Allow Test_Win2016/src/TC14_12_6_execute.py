@@ -4,7 +4,7 @@ from fac_def import *
 from variables import *
 
 tc_num = os.path.basename(__file__).split('.')[0]
-path = "C:\\fac_test_dir\\%s.sh"%tc_num
+path = "C:\\fac_test_dir\\%s.exe"%tc_num
 
 if os.path.isfile(path) == False:
 	f = open(path, 'w')
@@ -12,7 +12,8 @@ if os.path.isfile(path) == False:
 	f.close()
 
 
-os.system("C:\\fac_test_dir\\%s.sh"%tc_num)
+os.system("C:\\fac_test_dir\\%s.exe"%tc_num)
+os.system("taskkill /f /im %s.exe"%tc_num)
 
 sleep(1)
 if logCheck(tc_num) == policy_status :
