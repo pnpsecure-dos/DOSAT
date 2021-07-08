@@ -24,7 +24,6 @@ ret= dbs.connect()
 ret = dbs.select("dbsafer_log_%s_%s"%(dt['year'],dt['month']),"access_file_%s"%dt['day'], "",columns) 
 
 db_pm = sum(ret, [])
-print(db_pm)
 
 result = "false"
 tc_result = "true"
