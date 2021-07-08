@@ -32,7 +32,7 @@ count = 0
 fac_auth_path = "C:\\ProgramData\\PFC\\conf\\fac_auth.rules"
 
 # check conf file update
-while dt['time'] > ft and count < 60:
+while dt['time'] > ft and count < 150:
 	ft = time.ctime(os.path.getmtime("C:\\ProgramData\\PFC\\conf\\fac_auth.rules")).split()[3]
 	sleep(1)
 	count +=1
