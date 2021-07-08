@@ -92,18 +92,30 @@ def logCheck(tc_num):
     while count < 5 :
         log_files = os.listdir(log_path)
         for i in log_files :
-            fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
-            lines = fp.readlines()
-            for line in lines :
-                tmp_line = line.split()
-                print(tmp_line)
-                pname = tmp_line[18].split(':')[1]
-                if tc_num in pname :
-                    status = True
-                    pstatus = tmp_line[5].split(':')[1]
+            if i.split('.')[1] == "log" :
+                fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
+                lines = fp.readlines()
+                for line in lines :
+                    tmp_line = line.split()
+                    pname = tmp_line[18].split(':')[1]
+                    if tc_num in pname :
+                        status = True
+                        pstatus = tmp_line[5].split(':')[1]
+                        break;
+                if status == True :
                     break;
-            if status == True :
-                break;
+            else :
+                fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
+                lines = fp.readlines()
+                for line in lines :
+                    tmp_line = line.split()
+                    pname = tmp_line[14].split(':')[1]
+                    if tc_num in pname :
+                        status = True
+                        pstatus = tmp_line[5].split(':')[1]
+                        break;
+                if status == True :
+                    break;
         if status == True :
             break;
         sleep(1)
