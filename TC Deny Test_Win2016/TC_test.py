@@ -9,7 +9,7 @@ class TC_test(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        print("")
+        os.system('python ./src/TC14_tear_down.py')
 
     def test_TC14_08(self):
         rtn = os.system('python ./src/TC14_08.py')
