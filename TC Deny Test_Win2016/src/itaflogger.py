@@ -12,7 +12,7 @@ class Logger:
 	"""
 	
 	def __init__(self) :
-		f = open("conf/logger.conf",'r')
+		f = open("conf\\logger.conf",'r')
 		conf = json.load(f)
 		f.close()
 		logdir = os.path.dirname(conf['handlers']['filelog']['filename'])
