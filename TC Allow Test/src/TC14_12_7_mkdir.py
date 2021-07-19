@@ -7,17 +7,17 @@ os_platform = platform.system()
 tc_num = os.path.basename(__file__).split('.')[0]
 
 if os_platform == "Windows" :
-    path = "C:\\fac_test_dir\\%s"%tc_num
+    path = "C:\\fac_test_dir\\%s\\test"%tc_num
 else :
-    path = "/home/fac_test_dir/%s"%tc_num
+    path = "/home/fac_test_dir/%s/test"%tc_num
 
 if os.path.isdir(path):
-	os.rmdir(path)
+    os.rmdir(path)
 
 try:
-	os.mkdir(path)
+    os.mkdir(path)
 except Exception as e:
-	print(e)
+    print(e)
 
 sleep(1)
 if logCheck(tc_num, os_platform) == policy_status :
