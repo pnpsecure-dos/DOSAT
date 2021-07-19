@@ -1,9 +1,15 @@
 import pymysql as mysql
 import json
 import inspect
+import platform
 from logger import *
 
-CONF_PATH = '/home/jenkins/sharedspace/DBSAFER_OS/TC Allow Test_CentOS7.8/conf/dbinfo.conf'
+os_platform = platform.system()
+
+if os_platform == "Windows" :
+    CONF_PATH = '/home/jenkins/sharedspace/DBSAFER_OS/TC Allow Test/conf/dbinfo.conf'
+else :
+    CONF_PATH = 'C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Allow Test\\conf\\dbinfo.conf'
 
 class DBCtrl():
 	"""

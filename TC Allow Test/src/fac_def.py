@@ -72,8 +72,8 @@ def nowDate():
 
 
 
-def logCheck(tc_num):
-	"""check tc_num in pfclog
+def logCheck(tc_num, os_platform):
+    """check tc_num in pfclog
         Args:
                 tc_num(str): test case num = file name
         Return:
@@ -81,18 +81,59 @@ def logCheck(tc_num):
         Raises:
 
         """
-	result = ''
+    # ACT:'ALLOW/DENY' PNM:'Policy_Name'
 
-        # ACT:'ALLOW/DENY' PNM:'Policy_Name'
-	pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
-	pfcpath = pfcpath.strip('\n')
-	log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $22}'" %pfcpath).read()
-	tmp = re.split('[: ]+',log_check)
-	print(tmp)	
-	pname = tmp[3]
-	pstatus = tmp[1]
-	if tc_num in pname:
-        	result = pstatus
-	return result
-	
-	
+    if os_platform == "Windows" : 
+        count = 0
+        log_path = r"C:\\ProgramData\\PFC\\data"
+        status = False
+        pstatus = "N/A"
+
+        while count < 5 :
+            log_files = os.listdir(log_path)
+            for i in log_files :
+                if i.split('.')[1] == "log" :
+                    fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
+                    lines = fp.readlines()
+                    for line in lines :
+                        tmp_line = line.split()
+                        pname = tmp_line[18].split(':')[1]
+                        if tc_num in pname :
+                            status = True
+                            pstatus = tmp_line[5].split(':')[1]
+                            break;
+                    if status == True :
+                        break;
+                else :
+                    fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
+                    lines = fp.readlines()
+                    for line in lines :
+                        tmp_line = line.split()
+                        pname = tmp_line[14].split(':')[1]
+                        if tc_num in pname :
+                            status = True
+                            pstatus = tmp_line[5].split(':')[1]
+                            break;
+                    if status == True :
+                        break;
+            if status == True :
+                break;
+            sleep(1)
+            count = count + 1
+
+        return pstatus
+        
+    else :
+        result = ''
+        pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
+        pfcpath = pfcpath.strip('\n')
+        log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $22}'" %pfcpath).read()
+        tmp = re.split('[: ]+',log_check)
+        print(tmp)	
+        pname = tmp[3]
+        pstatus = tmp[1]
+        if tc_num in pname:
+                result = pstatus
+
+        return result
+
