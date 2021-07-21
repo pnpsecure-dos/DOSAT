@@ -9,7 +9,7 @@ class TC_test(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        os.system('python ./src/TC14_tear_down.py')
+        print("")
 
     def test_TC14_08(self):
         rtn = os.system('python ./src/TC14_08.py')
@@ -87,13 +87,13 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_27.py')
         self.assertEqual(rtn,0)
 
- #   def test_TC14_28(self):
- #       rtn = os.system('python ./src/TC14_28.py')
- #       self.assertEqual(rtn,0)
+#    def test_TC14_28(self):
+#        rtn = os.system('python ./src/TC14_28.py')
+#        self.assertEqual(rtn,0)
 
- #   def test_TC14_29(self):
- #       rtn = os.system('python ./src/TC14_29.py')
- #       self.assertEqual(rtn,0)
+#    def test_TC14_29(self):
+#        rtn = os.system('python ./src/TC14_29.py')
+#        self.assertEqual(rtn,0)
 
     def test_TC14_30(self):
         rtn = os.system('python ./src/TC14_30.py')
