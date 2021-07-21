@@ -30,9 +30,12 @@ usock.sendto('.'.encode(), (svr_ip,21114))
 
 ft = ''
 count = 0
-pfc_path = os.popen('cat /etc/.pfcpath').read().split('=')[1]
-pfc_path = pfc_path.strip('\n')
-fac_auth_path = "C:\\ProgramData\\PFC\\conf\\fac_auth.rules"
+
+if os_platform == "Windows" :
+    fac_auth_path = "C:\\ProgramData\\PFC\\conf\\fac_auth.rules"
+else :
+    pfc_path = os.popen('cat /etc/.pfcpath').read().split('=')[1]
+    pfc_path = pfc_path.strip('\n')
 
 # check conf file update
 while dt['time'] > ft and count < 150:
@@ -42,5 +45,3 @@ while dt['time'] > ft and count < 150:
         ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'" %pfc_path).read()
     sleep(1)
     count +=1
-
-sleep(5)
