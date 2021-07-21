@@ -45,3 +45,5 @@ while dt['time'] > ft and count < 150:
         ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'" %pfc_path).read()
     sleep(1)
     count +=1
+
+sleep(5)
