@@ -16,8 +16,12 @@ if os.path.isfile(path) == False:
 	f.write("TC14_12_4_rename test file")
 	f.close() 
 
-os.system("mv /home/fac_test_dir/%s /home/fac_test_dir/%s_re"%(tc_num,tc_num))
-os.system("mv /home/fac_test_dir/%s_re /home/fac_test_dir/%s"%(tc_num,tc_num))
+if os_platform == "Windows" :
+    os.system("rename C:\\fac_test_dir\\%s %s_re"%(tc_num,tc_num))
+    os.system("rename C:\\fac_test_dir\\%s_re %s"%(tc_num,tc_num))
+else :
+    os.system("mv /home/fac_test_dir/%s /home/fac_test_dir/%s_re"%(tc_num,tc_num))
+    os.system("mv /home/fac_test_dir/%s_re /home/fac_test_dir/%s"%(tc_num,tc_num))
 
 sleep(1)
 if logCheck(tc_num, os_platform) == policy_status :

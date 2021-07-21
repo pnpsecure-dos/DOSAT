@@ -16,7 +16,7 @@ if os.path.isfile(path) == False:
 	f.write("TC14_12_5_delete test file")
 	f.close()
 try:
-	os.remove("/home/fac_test_dir/%s"%tc_num)
+	os.remove(path)
 except Exception as e:
 	print(e)
 sleep(1)
