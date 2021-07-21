@@ -1,7 +1,15 @@
-import sys
+import sys, platform
 from glob import glob
 from fac_def import *
 from dbcon import DBCtrl
+
+os_platform = platform.system()
+tc_num = os.path.basename(__file__).split('.')[0]
+
+if os_platform == "Windows" :
+    os.system("type C:\\fac_test_dir\\%s"%tc_num)
+else :
+    os.system("cat /home/fac_test_dir/%s"%tc_num)
 
 sleep(60)
 
