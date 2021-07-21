@@ -40,7 +40,7 @@ while count < 30:
 	# if 'logtime > file access time' tmp = True
 	if alert_date >= now_dt:
 		result = re.split('[\r\n]+',alert[2])
-		print(result[3],result[5],result[7])
+#		print(result[3],result[5],result[7])
 		tmp = True
 		break
 	count+=1
