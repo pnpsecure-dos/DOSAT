@@ -3,9 +3,6 @@ from glob import glob
 from fac_def import *
 from dbcon import DBCtrl
 
-tc_num = os.path.basename(__file__).split('.')[0]
-
-os.system("type C:\\fac_test_dir\\%s"%tc_num)
 sleep(60)
 
 #test

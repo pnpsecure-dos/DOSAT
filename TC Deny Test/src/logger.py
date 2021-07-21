@@ -15,9 +15,9 @@ class Logger:
     def __init__(self) :
         os_platform = platform.system()
         if os_platform == "Windows" :
-            f = open("C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Allow Test\\conf\\logger_win.conf",'r')
+            f = open("C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Deny Test\\conf\\logger_win.conf",'r')
         else :
-            f = open("/home/jenkins/sharedspace/DBSAFER_OS/TC Allow Test/conf/logger_posix.conf",'r')
+            f = open("/home/jenkins/sharedspace/DBSAFER_OS/TC Deny Test/conf/logger_posix.conf",'r')
         conf = json.load(f)
         f.close()
         logdir = os.path.dirname(conf['handlers']['filelog']['filename'])
