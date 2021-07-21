@@ -29,8 +29,8 @@ else:
 
 count = 0
 tmp = False
-while count < 3:
-	sleep(20)
+while count < 30:
+	sleep(5)
 	
 	# last alertlog in dbsafer_log db 
 	alert = dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"select * from alertlog;")[-1]

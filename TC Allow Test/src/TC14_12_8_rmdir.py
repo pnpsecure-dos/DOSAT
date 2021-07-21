@@ -7,9 +7,9 @@ os_platform = platform.system()
 tc_num = os.path.basename(__file__).split('.')[0]
 
 if os_platform == "Windows" :
-    path = "C:\\fac_test_dir\\%s"%tc_num
+    path = "C:\\fac_test_dir\\%s\\test"%tc_num
 else :
-    path = "/home/fac_test_dir/%s"%tc_num
+    path = "/home/fac_test_dir/%s/test"%tc_num
 
 if os.path.isdir(path) == False:
 	os.mkdir(path)
