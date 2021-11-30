@@ -8,6 +8,7 @@ os_platform = platform.system()
 # file name without py
 tc_num = os.path.basename(__file__).split('.')[0]
 
+# cat
 if os_platform == "Windows" :
     os.system("type C:\\fac_test_dir\\%s"%tc_num)
 else :
