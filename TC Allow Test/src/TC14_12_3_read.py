@@ -31,3 +31,18 @@ if logCheck(tc_num, os_platform) == policy_status :
 else :
 	print("fail")
 	sys.exit(-1)
+
+
+if os_platform == "Windows" :
+    os.system("type C:\\fac_test_dir\\%s"%tc_num)
+else :
+    os.system("cat /home/fac_test_dir/%s"%tc_num)
+    
+sleep(1)
+
+if logCheck(tc_num, os_platform) == policy_status :
+	print("true")
+	sys.exit(0)
+else :
+	print("fail")
+	sys.exit(-1)
