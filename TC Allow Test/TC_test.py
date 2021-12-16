@@ -124,10 +124,6 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_36.py')
         self.assertEqual(rtn,0)
 
-    def test_TC14_61(self):
-        rtn = os.system('python ./src/TC14_61.py')
-        self.assertEqual(rtn,0)
-
     def test_TC14_38(self):
         rtn = os.system('python ./src/TC14_38.py')
         self.assertEqual(rtn,0)
@@ -138,4 +134,8 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_40_1_create(self):
         rtn = os.system('python ./src/TC14_40_1_create.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_61(self):
+        rtn = os.system('python ./src/TC14_61.py')
         self.assertEqual(rtn,0)
