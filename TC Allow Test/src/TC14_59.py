@@ -1,6 +1,6 @@
 import os, sys, platform
 from time import sleep
-from fac_def import * 
+from fac_def import *
 from variables import *
 
 os_platform = platform.system()
@@ -16,10 +16,10 @@ else :
 sleep(0.5)
 
 if logCheck(tc_num, os_platform) == policy_status:
-    print("true")
-    sys.exit(0)
+	print("true")
+	sys.exit(0)
 else:
-    print("fail")
-    sys.exit(-1)
+	print("fail")
+	sys.exit(-1)
 
 

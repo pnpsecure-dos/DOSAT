@@ -164,6 +164,42 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_40_1_create.py')
         self.assertEqual(rtn,0)
 
+    def test_TC14_49(self):
+        rtn = os.system('python ./src/TC14_49.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_50(self):
+        rtn = os.system('python ./src/TC14_50.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_51(self):
+        rtn = os.system('python ./src/TC14_51.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_52(self):
+        rtn = os.system('python ./src/TC14_52.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_53(self):
+        rtn = os.system('python ./src/TC14_53.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_54(self):
+        rtn = os.system('python ./src/TC14_54.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_55(self):
+        rtn = os.system('python ./src/TC14_55.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_58(self):
+        rtn = os.system('python ./src/TC14_58.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_59(self):
+        rtn = os.system('python ./src/TC14_59.py')
+        self.assertEqual(rtn,0)
+
     def test_TC14_61(self):
         rtn = os.system('python ./src/TC14_61.py')
         self.assertEqual(rtn,0)
