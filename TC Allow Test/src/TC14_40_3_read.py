@@ -33,9 +33,9 @@ else :
 
 
 if os_platform == "Windows" :
-    os.system("type C:\\fac_test_dir\\%s"%tc_num)
+    os.system("type C:\\fac_test_dir\\%s\\%s"%(tc_num,tc_num))
 else :
-    os.system("cat /home/fac_test_dir/%s"%tc_num)
+    os.system("cat /home/fac_test_dir/%s/%s"%(tc_num,tc_num))
 
 sleep(1)
 

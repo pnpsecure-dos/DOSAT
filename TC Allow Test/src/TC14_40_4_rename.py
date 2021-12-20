@@ -18,10 +18,8 @@ if os.path.isfile(path) == False:
 
 if os_platform == "Windows" :
     os.system("rename C:\\fac_test_dir\\%s\\%s %s_re"%(tc_num,tc_num,tc_num))
-    os.system("rename C:\\fac_test_dir\\%s\\%s_re %s"%(tc_num,tc_num,tc_num))
 else :
-    os.system("mv /home/fac_test_dir/%s/%s /home/fac_test_dir/%s_re"%(tc_num,tc_num,tc_num))
-    os.system("mv /home/fac_test_dir/%s/%s_re /home/fac_test_dir/%s"%(tc_num,tc_num,tc_num))
+    os.system("mv /home/fac_test_dir/%s/%s /home/fac_test_dir/%s/%s_re"%(tc_num,tc_num,tc_num,tc_num))
 
 sleep(1)
 if logCheck(tc_num, os_platform) == policy_status :
