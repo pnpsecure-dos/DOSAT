@@ -16,7 +16,7 @@ if policy_status == "ALLOW":
 	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from etc_acl_%s;"%dt['day'])
  
 	dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_pkill))
-	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from etc_acl_%s;"%dt['day'])
+	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from access_process_%s;"%dt['day'])
 
 elif policy_status == "DENY":
 	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%';"%(tb_fac))
@@ -29,7 +29,7 @@ elif policy_status == "DENY":
 
 	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%';"%(tb_pkill))
 	dbExecute("dbsafer3", "update %s set enabled=1 where name like 'TC%%' and name like '%%deny';"%(tb_pkill))
-	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from etc_acl_%s;"%dt['day'])
+	dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from access_process_%s;"%dt['day'])
 
 
 #send to server_manager
