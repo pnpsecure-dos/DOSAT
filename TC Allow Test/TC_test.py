@@ -303,3 +303,9 @@ class TC_test(unittest.TestCase):
         os.system('./src/TC14_92_sleep &')
         rtn = os.system('python ./src/TC14_92.py')
         self.assertEqual(rtn,0)
+
+    def test_TC14_93(self):
+        os.system('chmod +x ./src/TC14_93_sleep')
+        os.system('./src/TC14_93_sleep &')
+        rtn = os.system('python ./src/TC14_93.py')
+        self.assertEqual(rtn,0)

@@ -14,7 +14,7 @@ else :
     tc_sleep_pid=os.popen("ps -ef | grep \"%s_sleep\" | grep -v grep | awk '{print $2}'"%tc_num).read()
     os.system("kill -9 %s"%tc_sleep_pid)
 
-sleep(0.5)
+sleep(1)
 
 if logCheck(tc_num, os_platform) == policy_status:
     print("true")
