@@ -220,3 +220,86 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_76.py')
         self.assertEqual(rtn,0)
 
+    def test_TC14_77(self):
+        os.system('chmod +x ./src/TC14_77_sleep')
+        os.system('./src/TC14_77_sleep &')
+        rtn = os.system('python ./src/TC14_77.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_78(self):
+        os.system('chmod +x ./src/TC14_78_sleep')
+        os.system('./src/TC14_78_sleep &')
+        rtn = os.system('python ./src/TC14_78.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_79(self):
+        os.system('chmod +x ./src/TC14_79_sleep')
+        os.system('./src/TC14_79_sleep &')
+        rtn = os.system('python ./src/TC14_79.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_80(self):
+        os.system('chmod +x ./src/TC14_80_sleep')
+        os.system('./src/TC14_80_sleep &')
+        rtn = os.system('python ./src/TC14_80.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_81(self):
+        os.system('chmod +x ./src/TC14_81_sleep')
+        os.system('./src/TC14_81_sleep &')
+        rtn = os.system('python ./src/TC14_81.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_82(self):
+        os.system('chmod +x ./src/TC14_82_sleep')
+        os.system('./src/TC14_82_sleep &')
+        rtn = os.system('python ./src/TC14_82.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_83(self):
+        os.system('chmod +x ./src/TC14_83_sleep')
+        os.system('./src/TC14_83_sleep &')
+        rtn = os.system('python ./src/TC14_83.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_84(self):
+        os.system('chmod +x ./src/TC14_84_sleep')
+        os.system('./src/TC14_84_sleep &')
+        rtn = os.system('python ./src/TC14_84.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_85(self):
+        os.system('chmod +x ./src/TC14_85_sleep')
+        os.system('./src/TC14_85_sleep &')
+        rtn = os.system('python ./src/TC14_85.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_88(self):
+        os.system('chmod +x ./src/TC14_88_sleep')
+        os.system('./src/TC14_88_sleep &')
+        rtn = os.system('python ./src/TC14_88.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_89(self):
+        os.system('chmod +x ./src/TC14_89_sleep')
+        os.system('./src/TC14_89_sleep &')
+        rtn = os.system('python ./src/TC14_89.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_90(self):
+        os.system('chmod +x ./src/TC14_90_sleep')
+        os.system('./src/TC14_90_sleep &')
+        rtn = os.system('python ./src/TC14_90.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_91(self):
+        os.system('chmod +x ./src/TC14_91_sleep')
+        os.system('./src/TC14_91_sleep &')
+        rtn = os.system('python ./src/TC14_91.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_92(self):
+        os.system('chmod +x ./src/TC14_92_sleep')
+        os.system('./src/TC14_92_sleep &')
+        rtn = os.system('python ./src/TC14_92.py')
+        self.assertEqual(rtn,0)
