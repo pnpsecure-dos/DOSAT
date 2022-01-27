@@ -207,3 +207,14 @@ class TC_test(unittest.TestCase):
     def test_TC14_61(self):
         rtn = os.system('python ./src/TC14_61.py')
         self.assertEqual(rtn,0)
+
+    def test_TC14_75(self):
+        os.system('./src/TC14_75_sleep &')
+        rtn = os.system('python ./src/TC14_75.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_76(self):
+        os.system('./src/TC14_76_sleep &')
+        rtn = os.system('python ./src/TC14_76.py')
+        self.assertEqual(rtn,0)
+
