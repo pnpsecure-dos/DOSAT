@@ -17,7 +17,7 @@ else :
     os.system("kill -9 %s"%tc_sleep_pid)
 
 
-sleep(100)
+sleep(120)
 
 columns=["policy_name"]
 tc_list = ["TC14_75", "TC14_76", "TC14_77", "TC14_78", "TC14_79", "TC14_80", "TC14_81", "TC14_82", "TC14_83", "TC14_84", "TC14_85", "TC14_88", "TC14_89", "TC14_90", "TC14_91", "TC14_92", "TC14_93"]
