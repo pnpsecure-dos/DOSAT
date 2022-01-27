@@ -2,7 +2,6 @@ import os, sys, platform
 from time import sleep
 from fac_def import *
 from variables import *
-from glob import glob
 from dbcon import DBCtrl
 
 
@@ -18,16 +17,10 @@ else :
     os.system("kill -9 %s"%tc_sleep_pid)
 
 
-sleep(60)
+sleep(100)
 
-#test
 columns=["policy_name"]
-file_list = sorted(glob("TC14_*"))[:-1]
-tc_list = []
-
-for tc in file_list:
-	#remove '.py'
-	tc_list.append(tc[:-3])	
+tc_list = ["TC14_75", "TC14_76", "TC14_77", "TC14_78", "TC14_79", "TC14_80", "TC14_81", "TC14_82", "TC14_83", "TC14_84", "TC14_85", "TC14_88", "TC14_89", "TC14_90", "TC14_91", "TC14_92", "TC14_93"]
 
 dt = nowDate()
 
@@ -35,24 +28,20 @@ dbs = DBCtrl()
 ret= dbs.connect()
 ret = dbs.select("dbsafer_log_%s_%s"%(dt['year'],dt['month']),"access_process_%s"%dt['day'], "",columns) 
 
-db_pm = sum(ret, [])
-#print(db_pm)
+log_list_tmp = sum(ret, [])
+log_list =[]
 
-result = "false"
-tc_result = "true"
-for tc_num2 in tc_list :
-    for line in db_pm :
-        if tc_num2 in line :
-#            print("true",tc_num)
-            result = "true"
-            break
-        else :
-            result = "false"
-    if result == "true" :
+for log in log_list_tmp:
+    index = log.rfind("_")
+    log_tmp = log[0:index]
+    log_list.append(log_tmp)
+
+for tc in tc_list :
+    if tc in log_list :
         continue
     else :
-        print(tc_num2,"fail")
-        tc_result = "false"
-if tc_result == "false" :
-    sys.exit(-1)
+        print("fail")
+        sys.exit(-1)
 
+print("true")
+sys.exit(0)
