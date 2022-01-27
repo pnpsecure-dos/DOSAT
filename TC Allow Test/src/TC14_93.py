@@ -38,7 +38,6 @@ for log in log_list_tmp:
 
 for tc in tc_list :
     if tc in log_list :
-        print("%s ok"%tc)
         continue
     else :
         print("fail")
