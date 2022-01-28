@@ -199,7 +199,7 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_60.py')
         self.assertEqual(rtn,0)
 
-    def test_TC14_36(self):
+    def test_TC14_60_36(self):
         sleep(10)
         rtn = os.system('python ./src/TC14_36.py')
         self.assertEqual(rtn,0)
