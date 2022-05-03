@@ -16,7 +16,8 @@ dt = nowDate()
 now_dt = datetime.now()
 
 if os_platform == "Windows" :
-    os.system("type C:\\fac_test_dir\\%s"%tc_num)
+    tc_sleep_pid=os.popen("tasklist | findstr %s_sleep"%tc_num).read()
+    os.system("taskkill /f /pid %s"%tc_sleep_pid.split()[1])
 else :
     tc_sleep_pid=os.popen("ps -ef | grep \"%s_sleep\" | grep -v grep | awk '{print $2}'"%tc_num).read()
     os.system("kill -9 %s"%tc_sleep_pid)
