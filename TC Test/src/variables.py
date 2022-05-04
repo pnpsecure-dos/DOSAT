@@ -17,5 +17,3 @@ tb_integrity = "policy_file_integrity"
 tb_port_bind = "policy_pb_auth"
 tb_tcp_ctrl = "policy_hf_auth"
 
-policy_status = 'ALLOW'
-#policy_status = 'DENY'
