@@ -12,8 +12,8 @@ if os_platform == "Windows" :
     tc_sleep_pid=os.popen("tasklist | findstr %s_sleep"%tc_num).read()
     os.system("taskkill /f /pid %s"%tc_sleep_pid.split()[1])
 else :
-    tc_sleep_pid=os.popen("ps -ef | grep \"%s_sleep\" | grep -v grep | awk '{print $2}'"%tc_num).read()
-    os.system("kill -9 %s"%tc_sleep_pid)
+#    tc_sleep_pid=os.popen("ps -ef | grep \"%s_sleep\" | grep -v grep | awk '{print $2}'"%tc_num).read()
+    os.system("killall -9 %s_sleep"%tc_num)
 
 sleep(1)
 
