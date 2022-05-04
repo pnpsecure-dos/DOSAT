@@ -1,8 +1,12 @@
+from this import d
 import unittest
-import os
+import os, platform
 from time import sleep
 
+os_platform = platform.system()
+
 class TC_test(unittest.TestCase):
+
     @classmethod
     def setUpClass(cls):
         os.system('python ./src/TC14_init.py')
@@ -209,103 +213,154 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_75(self):
-        os.system('chmod +x ./src/TC14_75_sleep')
-        os.system('./src/TC14_75_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_75_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_75_sleep')
+            os.system('./test_process/TC14_75_sleep &')
         rtn = os.system('python ./src/TC14_75.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_76(self):
-        os.system('chmod +x ./src/TC14_76_sleep')
-        os.system('./src/TC14_76_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_76_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_76_sleep')
+            os.system('./test_process/TC14_76_sleep &')
         rtn = os.system('python ./src/TC14_76.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_77(self):
-        os.system('chmod +x ./src/TC14_77_sleep')
-        os.system('./src/TC14_77_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_77_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_77_sleep')
+            os.system('./test_process/TC14_77_sleep &')
         rtn = os.system('python ./src/TC14_77.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_78(self):
-        os.system('chmod +x ./src/TC14_78_sleep')
-        os.system('./src/TC14_78_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_78_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_78_sleep')
+            os.system('./test_process/TC14_78_sleep &')
         rtn = os.system('python ./src/TC14_78.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_79(self):
-        os.system('chmod +x ./src/TC14_79_sleep')
-        os.system('./src/TC14_79_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_79_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_79_sleep')
+            os.system('./test_process/TC14_79_sleep &')
         rtn = os.system('python ./src/TC14_79.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_80(self):
-        os.system('chmod +x ./src/TC14_80_sleep')
-        os.system('./src/TC14_80_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_80_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_80_sleep')
+            os.system('./test_process/TC14_80_sleep &')
         rtn = os.system('python ./src/TC14_80.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_81(self):
-        os.system('chmod +x ./src/TC14_81_sleep')
-        os.system('./src/TC14_81_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_81_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_81_sleep')
+            os.system('./test_process/TC14_81_sleep &')
         rtn = os.system('python ./src/TC14_81.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_82(self):
-        os.system('chmod +x ./src/TC14_82_sleep')
-        os.system('./src/TC14_82_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_82_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_82_sleep')
+            os.system('./test_process/TC14_82_sleep &')
         rtn = os.system('python ./src/TC14_82.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_83(self):
-        os.system('chmod +x ./src/TC14_83_sleep')
-        os.system('./src/TC14_83_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_83_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_83_sleep')
+            os.system('./test_process/TC14_83_sleep &')
         rtn = os.system('python ./src/TC14_83.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_84(self):
-        os.system('chmod +x ./src/TC14_84_sleep')
-        os.system('./src/TC14_84_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_84_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_84_sleep')
+            os.system('./test_process/TC14_84_sleep &')
         rtn = os.system('python ./src/TC14_84.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_85(self):
-        os.system('chmod +x ./src/TC14_85_sleep')
-        os.system('./src/TC14_85_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_85_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_85_sleep')
+            os.system('./test_process/TC14_85_sleep &')
         rtn = os.system('python ./src/TC14_85.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_88(self):
-        os.system('chmod +x ./src/TC14_88_sleep')
-        os.system('./src/TC14_88_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_88_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_88_sleep')
+            os.system('./test_process/TC14_88_sleep &')
         rtn = os.system('python ./src/TC14_88.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_89(self):
-        os.system('chmod +x ./src/TC14_89_sleep')
-        os.system('./src/TC14_89_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_89_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_89_sleep')
+            os.system('./test_process/TC14_89_sleep &')
         rtn = os.system('python ./src/TC14_89.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_90(self):
-        os.system('chmod +x ./src/TC14_90_sleep')
-        os.system('./src/TC14_90_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_90_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_90_sleep')
+            os.system('./test_process/TC14_90_sleep &')
         rtn = os.system('python ./src/TC14_90.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_91(self):
-        os.system('chmod +x ./src/TC14_91_sleep')
-        os.system('./src/TC14_91_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_91_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_91_sleep')
+            os.system('./test_process/TC14_91_sleep &')
         rtn = os.system('python ./src/TC14_91.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_92(self):
-        os.system('chmod +x ./src/TC14_92_sleep')
-        os.system('./src/TC14_92_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_92_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_92_sleep')
+            os.system('./test_process/TC14_92_sleep &')
         rtn = os.system('python ./src/TC14_92.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_93(self):
-        os.system('chmod +x ./src/TC14_93_sleep')
-        os.system('./src/TC14_93_sleep &')
+        if os_platform == "Windows":
+            os.system('test_process\\TC14_93_sleep.exe')
+        else:
+            os.system('chmod +x ./test_process/TC14_93_sleep')
+            os.system('./test_process/TC14_93_sleep &')
         rtn = os.system('python ./src/TC14_93.py')
         self.assertEqual(rtn,0)
