@@ -214,7 +214,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_75(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_75_sleep.exe')
+            os.system('start test_process\\TC14_75_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_75_sleep')
             os.system('./test_process/TC14_75_sleep &')
@@ -223,7 +223,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_76(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_76_sleep.exe')
+            os.system('start test_process\\TC14_76_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_76_sleep')
             os.system('./test_process/TC14_76_sleep &')
@@ -232,7 +232,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_77(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_77_sleep.exe')
+            os.system('start test_process\\TC14_77_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_77_sleep')
             os.system('./test_process/TC14_77_sleep &')
@@ -241,7 +241,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_78(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_78_sleep.exe')
+            os.system('start test_process\\TC14_78_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_78_sleep')
             os.system('./test_process/TC14_78_sleep &')
@@ -250,7 +250,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_79(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_79_sleep.exe')
+            os.system('start test_process\\TC14_79_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_79_sleep')
             os.system('./test_process/TC14_79_sleep &')
@@ -259,7 +259,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_80(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_80_sleep.exe')
+            os.system('start test_process\\TC14_80_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_80_sleep')
             os.system('./test_process/TC14_80_sleep &')
@@ -268,7 +268,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_81(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_81_sleep.exe')
+            os.system('start test_process\\TC14_81_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_81_sleep')
             os.system('./test_process/TC14_81_sleep &')
@@ -277,7 +277,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_82(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_82_sleep.exe')
+            os.system('start test_process\\TC14_82_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_82_sleep')
             os.system('./test_process/TC14_82_sleep &')
@@ -286,7 +286,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_83(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_83_sleep.exe')
+            os.system('start test_process\\TC14_83_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_83_sleep')
             os.system('./test_process/TC14_83_sleep &')
@@ -295,7 +295,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_84(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_84_sleep.exe')
+            os.system('start test_process\\TC14_84_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_84_sleep')
             os.system('./test_process/TC14_84_sleep &')
@@ -304,7 +304,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_85(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_85_sleep.exe')
+            os.system('start test_process\\TC14_85_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_85_sleep')
             os.system('./test_process/TC14_85_sleep &')
@@ -313,7 +313,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_88(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_88_sleep.exe')
+            os.system('start test_process\\TC14_88_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_88_sleep')
             os.system('./test_process/TC14_88_sleep &')
@@ -322,7 +322,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_89(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_89_sleep.exe')
+            os.system('start test_process\\TC14_89_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_89_sleep')
             os.system('./test_process/TC14_89_sleep &')
@@ -331,7 +331,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_90(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_90_sleep.exe')
+            os.system('start test_process\\TC14_90_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_90_sleep')
             os.system('./test_process/TC14_90_sleep &')
@@ -340,7 +340,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_91(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_91_sleep.exe')
+            os.system('start test_process\\TC14_91_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_91_sleep')
             os.system('./test_process/TC14_91_sleep &')
@@ -349,7 +349,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_92(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_92_sleep.exe')
+            os.system('start test_process\\TC14_92_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_92_sleep')
             os.system('./test_process/TC14_92_sleep &')
@@ -358,7 +358,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_93(self):
         if os_platform == "Windows":
-            os.system('test_process\\TC14_93_sleep.exe')
+            os.system('start test_process\\TC14_93_sleep.exe')
         else:
             os.system('chmod +x ./test_process/TC14_93_sleep')
             os.system('./test_process/TC14_93_sleep &')
