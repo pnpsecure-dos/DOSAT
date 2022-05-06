@@ -7,9 +7,9 @@ from logger import *
 os_platform = platform.system()
 
 if os_platform == "Windows" :
-    CONF_PATH = 'C:\\jenkins\\sharedspace\\DBSAFER_OS\\tc test\\conf\\dbinfo.conf'
+    CONF_PATH = 'C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Test\\conf\\dbinfo.conf'
 else :
-    CONF_PATH = '/home/jenkins/sharedspace/DBSAFER_OS/tc test/conf/dbinfo.conf'
+    CONF_PATH = '/home/jenkins/sharedspace/DBSAFER_OS/TC Test/conf/dbinfo.conf'
 
 class DBCtrl():
 	"""
