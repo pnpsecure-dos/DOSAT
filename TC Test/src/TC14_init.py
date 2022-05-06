@@ -13,9 +13,9 @@ dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_fac))
 dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_tcp_ctrl))
 dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_pkill))
 if policy_status == "DENY":
-	dbExecute("dbsafer3", "update %s set enabled=1 where name like 'TC%%' and name like '%%deny';"%(tb_fac))
-	dbExecute("dbsafer3", "update %s set enabled=1 where name like 'TC%%' and name like '%%deny';"%(tb_tcp_ctrl))
-	dbExecute("dbsafer3", "update %s set enabled=1 where name like 'TC%%' and name like '%%deny';"%(tb_pkill))
+	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_fac))
+	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_tcp_ctrl))
+	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_pkill))
 
 # delete log tables
 dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from access_file_%s;"%dt['day'])
