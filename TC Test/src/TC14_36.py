@@ -31,6 +31,8 @@ for log in log_list_tmp:
     log_list.append(log_tmp)
 
 for tc in tc_list :
+    if os_platform == "Windows" :
+        tc = tc + "_win"
     if tc in log_list :
         print("%s ok"%tc)
         continue
