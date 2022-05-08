@@ -18,6 +18,7 @@ if os.path.isfile(path) == False:
 
 if os_platform == "Windows" :
     os.system("rename C:\\fac_test_dir\\%s\\%s %s_re"%(tc_num,tc_num,tc_num))
+    os.system("del C:\\fac_test_dir\\%s\\%s_re"%(tc_num,tc_num))
 else :
     os.system("mv /home/fac_test_dir/%s/%s /home/fac_test_dir/%s/%s_re"%(tc_num,tc_num,tc_num,tc_num))
 

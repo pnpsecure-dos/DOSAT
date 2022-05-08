@@ -25,6 +25,6 @@ if logCheck(tc_num, os_platform) == policy_status :
 	print("true")
 	sys.exit(0)
 else :
-        print("fail")
-        sys.exit(-1)
+    print("fail")
+    sys.exit(-1)
 
