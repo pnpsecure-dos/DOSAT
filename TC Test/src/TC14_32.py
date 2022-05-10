@@ -1,4 +1,6 @@
-import os, sys, platform
+import os
+import sys
+import platform
 import re
 import socket as skt
 from time import sleep

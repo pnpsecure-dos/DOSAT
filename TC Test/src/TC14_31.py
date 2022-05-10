@@ -1,4 +1,6 @@
-import os, sys, platform
+import os
+import sys
+import platform
 from time import sleep
 from fac_def import * 
 from variables import *

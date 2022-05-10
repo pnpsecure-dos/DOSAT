@@ -1,4 +1,6 @@
-import os, platform
+import os
+import platform
+
 import logging
 import logging.config
 import logging.handlers

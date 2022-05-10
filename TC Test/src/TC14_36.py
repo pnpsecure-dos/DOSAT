@@ -1,4 +1,6 @@
-import sys, platform
+import os
+import sys
+import platform
 from glob import glob
 from fac_def import *
 from dbcon import DBCtrl
