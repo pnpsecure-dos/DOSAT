@@ -1,32 +1,41 @@
-import os, sys, platform
+import os, platform
+from socket import *
 from time import sleep
 from fac_def import *
 from variables import *
 from dbcon import DBCtrl
 
-
 os_platform = platform.system()
+port = 14153
 
 # file name without py
 tc_num = os.path.basename(__file__).split('.')[0]
 
 if os_platform == "Windows" :
-    os.system("taskkill /f /im %s_sleep.exe"%tc_num)
+    host = "192.168.105.69"
 else :
-    os.system("killall -9 %s_sleep"%tc_num)
+    host = "192.168.105.67"
 
+serverSocket = socket(AF_INET, SOCK_STREAM)
+serverSocket.bind((host,port))
+serverSocket.listen(1)
+
+print("wait...")
+
+serverSocket.close()
 
 sleep(120)
 
 columns=["policy_name"]
-tc_list = ["TC14_75", "TC14_76", "TC14_77", "TC14_78", "TC14_79", "TC14_80", "TC14_81", "TC14_82",
-            "TC14_83", "TC14_84", "TC14_85", "TC14_88", "TC14_89", "TC14_90", "TC14_91", "TC14_92", "TC14_93"]
+tc_list = ["TC14_131", "TC14_132", "TC14_133", "TC14_134", "TC14_135", "TC14_136", "TC14_137", "TC14_138",
+            "TC14_139", "TC14_140", "TC14_141", "TC14_142", "TC14_143", "TC14_144", "TC14_145", "TC14_146", 
+            "TC14_147", "TC14_150", "TC14_151", "TC14_152", "TC14_153"]
 
 dt = nowDate()
 
 dbs = DBCtrl()
 ret= dbs.connect()
-ret = dbs.select("dbsafer_log_%s_%s"%(dt['year'],dt['month']),"access_process_%s"%dt['day'], "",columns) 
+ret = dbs.select("dbsafer_log_%s_%s"%(dt['year'],dt['month']),"bind_control_%s"%dt['day'], "",columns) 
 
 log_list_tmp = sum(ret, [])
 log_list =[]

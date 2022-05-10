@@ -5,7 +5,7 @@ from fac_def import *
 from variables import *
 
 os_platform = platform.system()
-port = 14136
+port = 14137
 
 # file name without py
 tc_num = os.path.basename(__file__).split('.')[0]

@@ -364,3 +364,87 @@ class TC_test(unittest.TestCase):
             os.system('./test_process/TC14_93_sleep &')
         rtn = os.system('python ./src/TC14_93.py')
         self.assertEqual(rtn,0)
+        
+    def test_TC14_131(self):
+        rtn = os.system('python ./src/TC14_131.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_132(self):
+        rtn = os.system('python ./src/TC14_132.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_133(self):
+        rtn = os.system('python ./src/TC14_133.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_134(self):
+        rtn = os.system('python ./src/TC14_134.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_135(self):
+        rtn = os.system('python ./src/TC14_135.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_136(self):
+        rtn = os.system('python ./src/TC14_136.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_137(self):
+        rtn = os.system('python ./src/TC14_137.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_138(self):
+        rtn = os.system('python ./src/TC14_138.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_139(self):
+        rtn = os.system('python ./src/TC14_139.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_140(self):
+        rtn = os.system('python ./src/TC14_140.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_141(self):
+        rtn = os.system('python ./src/TC14_141.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_142(self):
+        rtn = os.system('python ./src/TC14_142.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_143(self):
+        rtn = os.system('python ./src/TC14_143.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_144(self):
+        rtn = os.system('python ./src/TC14_144.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_145(self):
+        rtn = os.system('python ./src/TC14_145.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_146(self):
+        rtn = os.system('python ./src/TC14_146.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_147(self):
+        rtn = os.system('python ./src/TC14_147.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_150(self):
+        rtn = os.system('python ./src/TC14_150.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_151(self):
+        rtn = os.system('python ./src/TC14_151.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_152(self):
+        rtn = os.system('python ./src/TC14_152.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_153(self):
+        rtn = os.system('python ./src/TC14_153.py')
+        self.assertEqual(rtn,0)
