@@ -17,13 +17,13 @@ if os_platform == "Windows" :
 else :
     host = "192.168.105.67"
 
-serverSocket = socket(AF_INET, SOCK_STREAM)
-serverSocket.bind((host,port))
-serverSocket.listen(1)
-
-print("wait...")
-
-serverSocket.close()
+try:
+    serverSocket = socket(AF_INET, SOCK_STREAM)
+    serverSocket.bind((host,port))
+    serverSocket.listen(1)
+    serverSocket.close()
+except Exception as e:
+    print(e)
 
 sleep(120)
 
