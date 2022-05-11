@@ -12,7 +12,9 @@ if os.path.isfile(path) == False:
 	f = open(path, 'w')
 	f.write("TC14_104_3_read test file")
 	f.close()	
-	
+
+os.system('chmod u+s /home/fac_test_dir/%s'%tc_num)
+
 try:
 	f = open(path, 'r')
 	f.read(10)

@@ -12,6 +12,9 @@ if os.path.isfile(path) == False:
 	f = open(path,'w')
 	f.write("TC14_104_5_delete test file")
 	f.close()
+
+os.system('chmod u+s /home/fac_test_dir/%s'%tc_num)
+
 try:
 	os.remove(path)
 except Exception as e:
