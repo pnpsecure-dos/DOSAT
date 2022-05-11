@@ -15,17 +15,20 @@ dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_fac))
 dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_tcp_ctrl))
 dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_pkill))
 dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_port_bind))
+dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_setuid))
 if policy_status == "DENY":
 	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_fac))
 	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_tcp_ctrl))
 	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_pkill))
 	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_port_bind))
+	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_setuid))
 
 # delete log tables
 dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from access_file_%s;"%dt['day'])
 dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from etc_acl_%s;"%dt['day'])
 dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from access_process_%s;"%dt['day'])
 dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from bind_control_%s;"%dt['day'])
+dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from setuid_file_%s;"%dt['day'])
 
 
 # send to server_manager
