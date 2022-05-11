@@ -10,7 +10,7 @@ path = "/home/fac_test_dir/%s"%tc_num
 
 try:
 	f = open(path, 'a')
-	f.write("TC14_104_2_write test file")
+	f.write("pwd")
 	f.close()
 except Exception as e:
 	print(e)

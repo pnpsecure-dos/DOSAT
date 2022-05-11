@@ -10,10 +10,10 @@ path = "/home/fac_test_dir/%s"%tc_num
 
 if os.path.isfile(path) == False:
 	f = open(path,'w')
-	f.write("TC14_104_5_delete test file")
+	f.write("pwd")
 	f.close()
 
-os.system('chmod u+s /home/fac_test_dir/%s'%tc_num)
+os.system('chmod u+s %s'%path)
 
 try:
 	os.remove(path)

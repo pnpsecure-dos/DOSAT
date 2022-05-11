@@ -13,7 +13,7 @@ if os.path.isfile(path):
 
 try:
 	f = open(path, 'w')
-	f.write("TC14_104_1_create test file")
+	f.write("pwd")
 	f.close()
 except Exception as e:
 	print(e)

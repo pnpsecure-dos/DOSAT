@@ -10,10 +10,10 @@ path = "/home/fac_test_dir/%s"%tc_num
 
 if os.path.isfile(path) == False:
 	f = open(path, 'w')
-	f.write("TC14_104_4_rename test file")
+	f.write("pwd")
 	f.close() 
 
-os.system('chmod u+s /home/fac_test_dir/%s'%tc_num)
+os.system('chmod u+s %s'%path)
 
 os.system("mv /home/fac_test_dir/%s /home/fac_test_dir/%s_re"%(tc_num,tc_num))
 os.system("mv /home/fac_test_dir/%s_re /home/fac_test_dir/%s"%(tc_num,tc_num))

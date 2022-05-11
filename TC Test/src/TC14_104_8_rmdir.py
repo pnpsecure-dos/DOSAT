@@ -11,7 +11,7 @@ path = "/home/fac_test_dir/%s"%tc_num
 if os.path.isdir(path) == False:
 	os.mkdir(path)
 
-os.system('chmod u+s /home/fac_test_dir/%s'%tc_num)
+os.system('chmod u+s %s'%path)
 
 try:
 	os.rmdir(path)
