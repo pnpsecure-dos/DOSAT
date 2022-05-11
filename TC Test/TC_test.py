@@ -403,7 +403,7 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_104_4_rename(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_rename')
+        os.system('chmod u+s /home/fac_test_dir/TC14_104_4_rename')
         rtn = os.system('python ./src/TC14_104_4_rename.py')
         self.assertEqual(rtn,0)
 
@@ -413,7 +413,7 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_104_6_execute(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_6_execute')
+        os.system('chmod u+s /home/fac_test_dir/TC14_104_6_execute.sh')
         rtn = os.system('python ./src/TC14_104_6_execute.py')
         self.assertEqual(rtn,0)
 
