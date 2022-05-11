@@ -1,6 +1,5 @@
 import os
 import platform
-
 from socket import *
 from time import sleep
 from fac_def import *

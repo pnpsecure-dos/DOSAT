@@ -2,7 +2,6 @@ import os
 import sys
 import platform
 import re
-import socket as skt
 from time import sleep
 from variables import *
 from fac_def import *

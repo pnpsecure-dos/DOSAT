@@ -1,42 +1,30 @@
 import os
-import platform
-from socket import *
+import sys
 from time import sleep
 from fac_def import *
 from variables import *
-from datetime import datetime
-
-os_platform = platform.system()
-port = 14150
 
 # file name without py
 tc_num = os.path.basename(__file__).split('.')[0]
+
 dt = nowDate()
 now_dt = datetime.now()
 
-if os_platform == "Windows" :
-    host = "192.168.105.69"
-else :
-    host = "192.168.105.67"
+# cat
+os.system("cat /home/fac_test_dir/%s"%tc_num)
 
-try:
-    serverSocket = socket(AF_INET, SOCK_STREAM)
-    serverSocket.bind((host,port))
-    serverSocket.listen(1)
-    serverSocket.close()
-except Exception as e:
-    print(e)
+sleep(0.5)
 
-sleep(1)
-
-if logCheck(tc_num, os_platform) == policy_status:
+if logCheck(tc_num, 'Posix') == policy_status:
     print("true")
 else:
     print("fail")
     sys.exit(-1)
 
+
 count = 0
 tmp = False
+
 while count < 30:
 	sleep(5)
 	
