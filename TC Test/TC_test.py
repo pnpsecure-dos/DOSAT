@@ -417,16 +417,6 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_104_6_execute.py')
         self.assertEqual(rtn,0)
 
-    def test_TC14_104_7_mkdir(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_7_mkdir')
-        rtn = os.system('python ./src/TC14_104_7_mkdir.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_104_8_rmdir(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_8_rmdir')
-        rtn = os.system('python ./src/TC14_104_8_rmdir.py')
-        self.assertEqual(rtn,0)
-
     def test_TC14_110(self):
         os.system('chmod u+s /home/fac_test_dir/TC14_110')
         rtn = os.system('python ./src/TC14_110.py')

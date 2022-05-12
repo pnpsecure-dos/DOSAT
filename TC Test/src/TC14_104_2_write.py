@@ -8,12 +8,15 @@ tc_num = os.path.basename(__file__).split('.')[0]
 
 path = "/home/fac_test_dir/%s"%tc_num
 
-try:
-	f = open(path, 'a')
+if os.path.isfile(path) == False:
+	f = open(path, 'w')
 	f.write("pwd")
-	f.close()
-except Exception as e:
-	print(e)
+	f.close()	
+
+os.system('chmod +x %s'%path)
+os.system('chmod u+s %s'%path)
+
+os.system('echo pwd >> %s'%path)
 
 sleep(1)
 

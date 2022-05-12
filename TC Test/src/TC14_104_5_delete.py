@@ -13,6 +13,7 @@ if os.path.isfile(path) == False:
 	f.write("pwd")
 	f.close()
 
+os.system('chmod +x %s'%path)
 os.system('chmod u+s %s'%path)
 
 try:

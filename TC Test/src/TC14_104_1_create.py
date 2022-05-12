@@ -12,9 +12,8 @@ if os.path.isfile(path):
 	os.remove(path)
 
 try:
-	f = open(path, 'w')
-	f.write("pwd")
-	f.close()
+	f=os.open(path, os.O_CREAT, 3577)
+	os.close
 except Exception as e:
 	print(e)
 	
