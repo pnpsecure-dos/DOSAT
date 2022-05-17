@@ -17,9 +17,9 @@ else :
     host = "192.168.105.67"
 
 try:
-    serverSocket = socket(AF_INET, SOCK_DGRAM)
-    serverSocket.bind((host,port))
-    serverSocket.close()
+    server_socket = socket(AF_INET, SOCK_DGRAM)
+    server_socket.bind((host,port))
+    server_socket.close()
 except Exception as e:
     print(e)
 

@@ -6,9 +6,8 @@ from fac_def import *
 from variables import *
 
 os_platform = platform.system()
-port = 14141
+port = 14710
 
-# file name without py
 tc_num = os.path.basename(__file__).split('.')[0]
 
 if os_platform == "Windows" :
@@ -16,13 +15,10 @@ if os_platform == "Windows" :
 else :
     host = "192.168.105.67"
 
-try:
-    server_socket = socket(AF_INET, SOCK_STREAM)
-    server_socket.bind((host,port))
-    server_socket.listen(1)
-    server_socket.close()
-except Exception as e:
-    print(e)
+client_socket = socket(AF_INET, SOCK_STREAM)
+client_socket.connect((host,port))
+client_socket.send("hi".encode())
+msg = client_socket.recv(1024)
 
 sleep(1)
 

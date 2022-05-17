@@ -1,3 +1,4 @@
+from fcntl import DN_DELETE
 from variables import *
 import pymysql as py
 import paramiko
@@ -127,7 +128,14 @@ def logCheck(tc_num, os_platform):
         result = ''
         pfcpath = os.popen('cat /etc/.pfcpath').read().split('=')[1]
         pfcpath = pfcpath.strip('\n')
-        log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $22}'" %pfcpath).read()
+
+        hf_check = os.popen("tail -1 %s/log/pfclog | awk '{print $5}'"%pfcpath).read()
+
+        if "HF_ACL" in hf_check:
+            log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $17}'" %pfcpath).read()
+        else:
+            log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $22}'" %pfcpath).read()
+
         tmp = re.split('[: ]+',log_check)
         print(tmp)	
         pname = tmp[3]
