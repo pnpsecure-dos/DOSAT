@@ -16,10 +16,13 @@ if os_platform == "Windows" :
 else :
     host = "192.168.105.67"
 
-client_socket = socket(AF_INET, SOCK_STREAM)
-client_socket.connect((host,port))
-client_socket.send("hi".encode())
-msg = client_socket.recv(1024)
+try:
+    client_socket = socket(AF_INET, SOCK_STREAM)
+    client_socket.connect((host,port))
+    client_socket.send("hi".encode())
+    msg = client_socket.recv(1024)
+except Exception as e:
+    print(e)
 
 sleep(1)
 

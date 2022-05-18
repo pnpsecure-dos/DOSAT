@@ -1,7 +1,6 @@
 import unittest
 import os
 import platform
-
 from time import sleep
 
 os_platform = platform.system()
