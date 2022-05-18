@@ -92,14 +92,6 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_27.py')
         self.assertEqual(rtn,0)
 
-#    def test_TC14_28(self):
-#        rtn = os.system('python ./src/TC14_28.py')
-#        self.assertEqual(rtn,0)
-
-#    def test_TC14_29(self):
-#        rtn = os.system('python ./src/TC14_29.py')
-#        self.assertEqual(rtn,0)
-
     def test_TC14_30(self):
         rtn = os.system('python ./src/TC14_30.py')
         self.assertEqual(rtn,0)
@@ -112,6 +104,7 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/TC14_32.py')
         self.assertEqual(rtn,0)
 
+#예외 정책 테스트는 TC14_38 ~ TC14_60 으로 대체
 #    def test_TC14_33(self):
 #        rtn = os.system('python ./src/TC14_33.py')
 #        self.assertEqual(rtn,0)
