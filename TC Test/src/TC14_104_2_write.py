@@ -1,15 +1,11 @@
 import os
 import sys
-import platform
 from time import sleep
 from fac_def import *
 from variables import *
 
-os_platform = platform.system()
-if os_platform == "Windows":
-	sys.exit(0)
-
 tc_num = os.path.basename(__file__).split('.')[0]
+
 path = "/home/fac_test_dir/%s"%tc_num
 
 if os.path.isfile(path) == False:
@@ -24,7 +20,7 @@ os.system('echo pwd >> %s'%path)
 
 sleep(1)
 
-if logCheck(tc_num, os_platform) == policy_status :
+if logCheck(tc_num, 'Posix') == policy_status :
 	print("true")
 	sys.exit(0)
 else :

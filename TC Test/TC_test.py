@@ -473,121 +473,190 @@ class TC_test(unittest.TestCase):
             os.system('./test_process/TC14_93_sleep &')
         rtn = os.system('python ./src/TC14_93.py')
         self.assertEqual(rtn,0)
-
+    
     def test_TC14_100(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_100')
-        rtn = os.system('python ./src/TC14_100.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_100')
+            rtn = os.system('python ./src/TC14_100.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_101(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_101')
-        rtn = os.system('python ./src/TC14_101.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_101')
+            rtn = os.system('python ./src/TC14_101.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_102(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_102')
-        rtn = os.system('python ./src/TC14_102.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_102')
+            rtn = os.system('python ./src/TC14_102.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_103(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_103')
-        rtn = os.system('python ./src/TC14_103.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_103')
+            rtn = os.system('python ./src/TC14_103.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_104_1_create(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_1_create')
-        rtn = os.system('python ./src/TC14_104_1_create.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_104_1_create')
+            rtn = os.system('python ./src/TC14_104_1_create.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_104_2_write(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_2_write')
-        rtn = os.system('python ./src/TC14_104_2_write.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_104_2_write')
+            rtn = os.system('python ./src/TC14_104_2_write.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_104_3_read(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_3_read')
-        rtn = os.system('python ./src/TC14_104_3_read.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_104_3_read')
+            rtn = os.system('python ./src/TC14_104_3_read.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_104_4_rename(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_4_rename')
-        rtn = os.system('python ./src/TC14_104_4_rename.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_104_4_rename')
+            rtn = os.system('python ./src/TC14_104_4_rename.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_104_5_delete(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_5_delete')
-        rtn = os.system('python ./src/TC14_104_5_delete.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_104_5_delete')
+            rtn = os.system('python ./src/TC14_104_5_delete.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_104_6_execute(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_104_6_execute.sh')
-        rtn = os.system('python ./src/TC14_104_6_execute.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_104_6_execute.sh')
+            rtn = os.system('python ./src/TC14_104_6_execute.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_110(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_110')
-        rtn = os.system('python ./src/TC14_110.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_110')
+            rtn = os.system('python ./src/TC14_110.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_111(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_111')
-        rtn = os.system('python ./src/TC14_111.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_111')
+            rtn = os.system('python ./src/TC14_111.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_112(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_112')
-        rtn = os.system('python ./src/TC14_112.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_112')
+            rtn = os.system('python ./src/TC14_112.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_113(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_113')
-        rtn = os.system('python ./src/TC14_113.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_113')
+            rtn = os.system('python ./src/TC14_113.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_114(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_114')
-        rtn = os.system('python ./src/TC14_114.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_114')
+            rtn = os.system('python ./src/TC14_114.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_115(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_115')
-        rtn = os.system('python ./src/TC14_115.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_115')
+            rtn = os.system('python ./src/TC14_115.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_116(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_116')
-        rtn = os.system('python ./src/TC14_116.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_116')
+            rtn = os.system('python ./src/TC14_116.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_119(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_119')
-        rtn = os.system('python ./src/TC14_119.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_119')
+            rtn = os.system('python ./src/TC14_119.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_120(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_120')
-        rtn = os.system('python ./src/TC14_120.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_120')
+            rtn = os.system('python ./src/TC14_120.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_121(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_121')
-        rtn = os.system('python ./src/TC14_121.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_121')
+            rtn = os.system('python ./src/TC14_121.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_122(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_122')
-        rtn = os.system('python ./src/TC14_122.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_122')
+            rtn = os.system('python ./src/TC14_122.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_123(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_123')
-        rtn = os.system('python ./src/TC14_123.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_123')
+            rtn = os.system('python ./src/TC14_123.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_124(self):
-        os.system('chmod u+s /home/fac_test_dir/TC14_124')
-        rtn = os.system('python ./src/TC14_124.py')
-        self.assertEqual(rtn,0)
+        if os_platform == "Windows":
+            pass
+        else:
+            os.system('chmod u+s /home/fac_test_dir/TC14_124')
+            rtn = os.system('python ./src/TC14_124.py')
+            self.assertEqual(rtn,0)
 
     def test_TC14_131(self):
         rtn = os.system('python ./src/TC14_131.py')
