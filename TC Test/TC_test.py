@@ -210,72 +210,114 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_61(self):
-        os.system('python ./src/tcp_server.py 14610 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14610')
+        else:
+            os.system('python ./src/tcp_server.py 14610 &')
         rtn = os.system('python ./src/TC14_61.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_62(self):
-        os.system('python ./src/tcp_server.py 14620 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14620')
+        else:
+            os.system('python ./src/tcp_server.py 14620 &')
         rtn = os.system('python ./src/TC14_62.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_63(self):
-        os.system('python ./src/tcp_server.py 14630 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14630')
+        else:
+            os.system('python ./src/tcp_server.py 14630 &')
         rtn = os.system('python ./src/TC14_63.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_245(self):
-        os.system('python ./src/tcp_server.py 14245 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14245')
+        else:
+            os.system('python ./src/tcp_server.py 14245 &')
         rtn = os.system('python ./src/TC14_245.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_64(self):
-        os.system('python ./src/tcp_server.py 14640 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14640')
+        else:
+            os.system('python ./src/tcp_server.py 14640 &')
         rtn = os.system('python ./src/TC14_64.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_66(self):
-        os.system('python ./src/tcp_server.py 14660 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14660')
+        else:
+            os.system('python ./src/tcp_server.py 14660 &')
         rtn = os.system('python ./src/TC14_66.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_67(self):
-        os.system('python ./src/tcp_server.py 14670 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14670')
+        else:
+            os.system('python ./src/tcp_server.py 14670 &')
         rtn = os.system('python ./src/TC14_67.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_68(self):
-        os.system('python ./src/tcp_server.py 14680 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14680')
+        else:
+            os.system('python ./src/tcp_server.py 14680 &')
         rtn = os.system('python ./src/TC14_68.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_69(self):
-        os.system('python ./src/tcp_server.py 14690 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14690')
+        else:
+            os.system('python ./src/tcp_server.py 14690 &')
         rtn = os.system('python ./src/TC14_69.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_70(self):
-        os.system('python ./src/tcp_server.py 14700 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14700')
+        else:
+            os.system('python ./src/tcp_server.py 14700 &')
         rtn = os.system('python ./src/TC14_70.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_71(self):
-        os.system('python ./src/tcp_server.py 14710 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14710')
+        else:
+            os.system('python ./src/tcp_server.py 14710 &')
         rtn = os.system('python ./src/TC14_71.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_72(self):
-        os.system('python ./src/tcp_server.py 14720 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14720')
+        else:
+            os.system('python ./src/tcp_server.py 14720 &')
         rtn = os.system('python ./src/TC14_72.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_73(self):
-        os.system('python ./src/tcp_server.py 14730 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14730')
+        else:
+            os.system('python ./src/tcp_server.py 14730 &')
         rtn = os.system('python ./src/TC14_73.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_74(self):
-        os.system('python ./src/tcp_server.py 14740 &')
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_server.py 14740')
+        else:
+            os.system('python ./src/tcp_server.py 14740 &')
         rtn = os.system('python ./src/TC14_74.py')
         self.assertEqual(rtn,0)
 
