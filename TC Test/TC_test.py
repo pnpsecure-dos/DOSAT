@@ -468,7 +468,7 @@ class TC_test(unittest.TestCase):
     
     def test_TC14_100(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_100')
             rtn = os.system('python ./src/TC14_100.py')
@@ -476,7 +476,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_101(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_101')
             rtn = os.system('python ./src/TC14_101.py')
@@ -484,7 +484,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_102(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_102')
             rtn = os.system('python ./src/TC14_102.py')
@@ -492,7 +492,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_103(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_103')
             rtn = os.system('python ./src/TC14_103.py')
@@ -500,7 +500,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_104_1_create(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_104_1_create')
             rtn = os.system('python ./src/TC14_104_1_create.py')
@@ -508,7 +508,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_104_2_write(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_104_2_write')
             rtn = os.system('python ./src/TC14_104_2_write.py')
@@ -516,7 +516,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_104_3_read(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_104_3_read')
             rtn = os.system('python ./src/TC14_104_3_read.py')
@@ -524,7 +524,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_104_4_rename(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_104_4_rename')
             rtn = os.system('python ./src/TC14_104_4_rename.py')
@@ -532,7 +532,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_104_5_delete(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_104_5_delete')
             rtn = os.system('python ./src/TC14_104_5_delete.py')
@@ -540,7 +540,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_104_6_execute(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_104_6_execute.sh')
             rtn = os.system('python ./src/TC14_104_6_execute.py')
@@ -548,7 +548,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_110(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_110')
             rtn = os.system('python ./src/TC14_110.py')
@@ -556,7 +556,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_111(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_111')
             rtn = os.system('python ./src/TC14_111.py')
@@ -564,7 +564,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_112(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_112')
             rtn = os.system('python ./src/TC14_112.py')
@@ -572,7 +572,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_113(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_113')
             rtn = os.system('python ./src/TC14_113.py')
@@ -580,7 +580,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_114(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_114')
             rtn = os.system('python ./src/TC14_114.py')
@@ -588,7 +588,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_115(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_115')
             rtn = os.system('python ./src/TC14_115.py')
@@ -596,7 +596,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_116(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_116')
             rtn = os.system('python ./src/TC14_116.py')
@@ -604,7 +604,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_119(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_119')
             rtn = os.system('python ./src/TC14_119.py')
@@ -612,7 +612,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_120(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_120')
             rtn = os.system('python ./src/TC14_120.py')
@@ -620,7 +620,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_121(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_121')
             rtn = os.system('python ./src/TC14_121.py')
@@ -628,7 +628,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_122(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_122')
             rtn = os.system('python ./src/TC14_122.py')
@@ -636,7 +636,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_123(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_123')
             rtn = os.system('python ./src/TC14_123.py')
@@ -644,7 +644,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_124(self):
         if os_platform == "Windows":
-            pass
+            self.skipTest("skip")
         else:
             os.system('chmod u+s /home/fac_test_dir/TC14_124')
             rtn = os.system('python ./src/TC14_124.py')
