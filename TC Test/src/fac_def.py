@@ -1,4 +1,3 @@
-from fcntl import DN_DELETE
 from variables import *
 import pymysql as py
 import paramiko
