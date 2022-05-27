@@ -52,6 +52,8 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_12_6_execute(self):
+        if os_platform != 'windows':
+            os.system('chmod +x ./src/file_access_control/TC14_12_6_execute.py')
         rtn = os.system('python ./src/file_access_control/TC14_12_6_execute.py')
         self.assertEqual(rtn,0)
 
@@ -145,6 +147,8 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_40_6_execute(self):
+        if os_platform != 'windows':
+            os.system('chmod +x ./src/file_access_control/TC14_40_6_execute.py')
         rtn = os.system('python ./src/file_access_control/TC14_40_6_execute.py')
         self.assertEqual(rtn,0)
 
@@ -470,7 +474,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_100')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_100')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_100.py')
             self.assertEqual(rtn,0)
 
@@ -478,7 +482,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_101')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_101')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_101.py')
             self.assertEqual(rtn,0)
 
@@ -486,7 +490,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_102')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_102')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_102.py')
             self.assertEqual(rtn,0)
 
@@ -494,7 +498,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_103')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_103')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_103.py')
             self.assertEqual(rtn,0)
 
@@ -502,7 +506,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_1_create')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_1_create')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_104_1_create.py')
             self.assertEqual(rtn,0)
 
@@ -510,7 +514,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_2_write')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_2_write')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_104_2_write.py')
             self.assertEqual(rtn,0)
 
@@ -518,7 +522,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_3_read')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_3_read')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_104_3_read.py')
             self.assertEqual(rtn,0)
 
@@ -526,7 +530,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_4_rename')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_4_rename')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_104_4_rename.py')
             self.assertEqual(rtn,0)
 
@@ -534,7 +538,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_5_delete')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_5_delete')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_104_5_delete.py')
             self.assertEqual(rtn,0)
 
@@ -542,7 +546,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_6_execute.sh')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_104_6_execute.sh')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_104_6_execute.py')
             self.assertEqual(rtn,0)
 
@@ -550,7 +554,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_110')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_110')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_110.py')
             self.assertEqual(rtn,0)
 
@@ -558,7 +562,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_111')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_111')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_111.py')
             self.assertEqual(rtn,0)
 
@@ -566,7 +570,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_112')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_112')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_112.py')
             self.assertEqual(rtn,0)
 
@@ -574,7 +578,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_113')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_113')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_113.py')
             self.assertEqual(rtn,0)
 
@@ -582,7 +586,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_114')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_114')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_114.py')
             self.assertEqual(rtn,0)
 
@@ -590,7 +594,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_115')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_115')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_115.py')
             self.assertEqual(rtn,0)
 
@@ -598,7 +602,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_116')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_116')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_116.py')
             self.assertEqual(rtn,0)
 
@@ -606,7 +610,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_119')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_119')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_119.py')
             self.assertEqual(rtn,0)
 
@@ -614,7 +618,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_120')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_120')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_120.py')
             self.assertEqual(rtn,0)
 
@@ -622,7 +626,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_121')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_121')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_121.py')
             self.assertEqual(rtn,0)
 
@@ -630,7 +634,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_122')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_122')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_122.py')
             self.assertEqual(rtn,0)
 
@@ -638,7 +642,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_123')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_123')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_123.py')
             self.assertEqual(rtn,0)
 
@@ -646,7 +650,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows":
             self.skipTest("skip")
         else:
-            os.system('chmod u+s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_124')
+            os.system('chmod u+xs /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/TC14_124')
             rtn = os.system('python ./src/setuid_file_access_control/TC14_124.py')
             self.assertEqual(rtn,0)
 
