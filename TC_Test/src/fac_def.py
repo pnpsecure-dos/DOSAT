@@ -89,7 +89,7 @@ def logCheck(tc_num, os_platform):
         status = False
         pstatus = "N/A"
 
-        while count < 5 :
+        while count < 50 :
             log_files = os.listdir(log_path)
             for i in log_files :
                 if i.split('.')[1] == "log" :
@@ -118,7 +118,7 @@ def logCheck(tc_num, os_platform):
                         break;
             if status == True :
                 break;
-            sleep(1)
+            sleep(0.1)
             count = count + 1
 
         return pstatus
