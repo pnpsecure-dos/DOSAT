@@ -1,5 +1,6 @@
 import os
 import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 import platform
 from time import sleep
 from fac_def import *
@@ -11,7 +12,7 @@ tc_num = os.path.basename(__file__).split('.')[0]
 if os_platform == "Windows" :
     path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Test\\test_file\\windows\\%s"%tc_num
 else :
-    path = "/home/jenkins/sharedspace/DBSAFER_OS/TC Test/test_file/posix/%s"%tc_num
+    path = "/home/jenkins/sharedspace/DBSAFER_OS/TC\ Test/test_file/posix/%s"%tc_num
 
 if os.path.isfile(path) == False:
 	f = open(path, 'w')
@@ -22,8 +23,8 @@ if os_platform == "Windows" :
     os.system("rename C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Test\\test_file\\windows\\%s %s_re"%(tc_num,tc_num))
     os.system("rename C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Test\\test_file\\windows\\%s_re %s"%(tc_num,tc_num))
 else :
-    os.system("mv /home/jenkins/sharedspace/DBSAFER_OS/TC Test/test_file/posix/%s /home/jenkins/sharedspace/DBSAFER_OS/TC Test/test_file/posix/%s_re"%(tc_num,tc_num))
-    os.system("mv /home/jenkins/sharedspace/DBSAFER_OS/TC Test/test_file/posix/%s_re /home/jenkins/sharedspace/DBSAFER_OS/TC Test/test_file/posix/%s"%(tc_num,tc_num))
+    os.system("mv /home/jenkins/sharedspace/DBSAFER_OS/TC\ Test/test_file/posix/%s /home/jenkins/sharedspace/DBSAFER_OS/TC\ Test/test_file/posix/%s_re"%(tc_num,tc_num))
+    os.system("mv /home/jenkins/sharedspace/DBSAFER_OS/TC\ Test/test_file/posix/%s_re /home/jenkins/sharedspace/DBSAFER_OS/TC\ Test/test_file/posix/%s"%(tc_num,tc_num))
 
 sleep(1)
 if logCheck(tc_num, os_platform) == policy_status :

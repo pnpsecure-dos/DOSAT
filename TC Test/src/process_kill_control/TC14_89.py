@@ -1,8 +1,10 @@
 import os
 import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 import platform
 import os
 import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 import platform
 from time import sleep
 from fac_def import *

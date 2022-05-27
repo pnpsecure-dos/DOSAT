@@ -1,5 +1,6 @@
 import os
 import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 import platform
 from glob import glob
 from fac_def import *
@@ -11,7 +12,7 @@ tc_num = os.path.basename(__file__).split('.')[0]
 if os_platform == "Windows" :
     os.system("type C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC Test\\test_file\\windows\\%s"%tc_num)
 else :
-    os.system("cat /home/jenkins/sharedspace/DBSAFER_OS/TC Test/test_file/posix/%s"%tc_num)
+    os.system("cat /home/jenkins/sharedspace/DBSAFER_OS/TC\ Test/test_file/posix/%s"%tc_num)
 
 sleep(120)
 
