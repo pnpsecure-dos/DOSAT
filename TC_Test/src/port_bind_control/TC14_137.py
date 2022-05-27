@@ -13,10 +13,7 @@ port = 14137
 # file name without py
 tc_num = os.path.basename(__file__).split('.')[0]
 
-if os_platform == "Windows" :
-    host = "192.168.105.69"
-else :
-    host = "192.168.105.67"
+host = jenkins_node.split(' ')[0]
 
 try:
     server_socket = socket(AF_INET, SOCK_DGRAM)
