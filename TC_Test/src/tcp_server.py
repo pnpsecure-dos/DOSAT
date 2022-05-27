@@ -1,15 +1,9 @@
-import os
-import platform
 import sys
 from socket import *
 
-os_platform = platform.system()
 port = int(sys.argv[1])
 
-if os_platform == "Windows" :
-    host = "192.168.105.69"
-else :
-    host = "192.168.105.67"
+host = jenkins_node.split(' ')[0]
 
 server_socket = socket(AF_INET, SOCK_STREAM)
 server_socket.settimeout(30)
