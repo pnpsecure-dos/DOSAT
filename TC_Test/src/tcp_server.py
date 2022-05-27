@@ -1,5 +1,6 @@
 import sys
 from socket import *
+from variables import *
 
 port = int(sys.argv[1])
 
