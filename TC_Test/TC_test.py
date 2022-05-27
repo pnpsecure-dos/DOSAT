@@ -53,7 +53,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_12_6_execute(self):
         if os_platform != 'windows':
-            os.system('chmod +x ./src/file_access_control/TC14_12_6_execute.py')
+            os.system('chmod +x ./test_file/posix/TC14_12_6_execute.sh')
         rtn = os.system('python ./src/file_access_control/TC14_12_6_execute.py')
         self.assertEqual(rtn,0)
 
@@ -148,7 +148,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_40_6_execute(self):
         if os_platform != 'windows':
-            os.system('chmod +x ./src/file_access_control/TC14_40_6_execute.py')
+            os.system('chmod +x ./test_file/posix/TC14_40_6_execute/TC14_40_6_execute.sh')
         rtn = os.system('python ./src/file_access_control/TC14_40_6_execute.py')
         self.assertEqual(rtn,0)
 
