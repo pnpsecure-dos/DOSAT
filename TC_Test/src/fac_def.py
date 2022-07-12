@@ -131,7 +131,7 @@ def logCheck(tc_num, os_platform):
         hf_check = os.popen("tail -1 %s/log/pfclog | awk '{print $5}'"%pfcpath).read()
 
         if "HF_ACL" in hf_check:
-            log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $17}'" %pfcpath).read()
+            log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $16}'" %pfcpath).read()
         else:
             log_check = os.popen("tail -1 %s/log/pfclog | awk '{print $6, $22}'" %pfcpath).read()
 
