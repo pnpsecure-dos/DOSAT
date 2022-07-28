@@ -1,5 +1,6 @@
 import socket
 import sys
+from variables import *
 
 host = jenkins_node.split(' ')[0]
 port = int(sys.argv[1])

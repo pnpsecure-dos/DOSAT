@@ -25,7 +25,7 @@ sleep(120)
 
 columns=["policy_name"]
 tc_list = ['TC14_100', 'TC14_101', 'TC14_102', 'TC14_103', 'TC14_104_1_create', 'TC14_104_2_write', 'TC14_104_3_read',
-            'TC14_104_4_rename', 'TC14_104_5_delete', 'TC14_104_6_execute', 'TC14_104_7_mkdir', 'TC14_104_8_rmdir',
+            'TC14_104_4_rename', 'TC14_104_5_delete', 'TC14_104_6_execute',
             'TC14_110', 'TC14_111', 'TC14_112', 'TC14_113', 'TC14_114', 'TC14_115', 'TC14_116', 'TC14_119', 'TC14_120',
             'TC14_121', 'TC14_122', 'TC14_123', 'TC14_124']
 
