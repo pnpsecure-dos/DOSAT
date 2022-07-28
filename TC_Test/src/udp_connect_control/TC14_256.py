@@ -8,18 +8,22 @@ from fac_def import *
 from variables import *
 
 os_platform = platform.system()
-port = 14710
-
+host = jenkins_node.split(' ')[0]
+port = 14256
 tc_num = os.path.basename(__file__).split('.')[0]
 dt = nowDate()
 now_dt = datetime.now()
-host = jenkins_node.split(' ')[0]
+
+send_msg = str.encode("Hello UDP Server")
+server_info = (host, port)
+bufferSize = 1024
 
 try:
-    client_socket = socket(AF_INET, SOCK_STREAM)
-    client_socket.connect((host,port))
-    client_socket.send("hi".encode())
-    msg = client_socket.recv(1024)
+    udp_client_socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+    udp_client_socket.sendto(send_msg, server_info)
+    msg_from_server = udp_client_socket.recvfrom(bufferSize)
+    msg = "Message from Server {}".format(msg_from_server[0])
+    print(msg)
 except Exception as e:
     print(e)
 

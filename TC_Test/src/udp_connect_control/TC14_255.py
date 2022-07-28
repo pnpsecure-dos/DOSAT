@@ -9,7 +9,7 @@ from variables import *
 
 os_platform = platform.system()
 host = jenkins_node.split(' ')[0]
-port = 14246
+port = 14255
 tc_num = os.path.basename(__file__).split('.')[0]
 
 send_msg = str.encode("Hello UDP Server")
