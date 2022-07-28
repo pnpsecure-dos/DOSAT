@@ -14,7 +14,8 @@ class TC_test(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         print("")
-
+    
+    # 파일 접근 통제
     def test_TC14_08(self):
         rtn = os.system('python ./src/file_access_control/TC14_08.py')
         self.assertEqual(rtn,0)
@@ -105,11 +106,13 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/file_access_control/TC14_32.py')
         self.assertEqual(rtn,0)
 
-#예외 정책 테스트는 TC14_38 ~ TC14_60 으로 대체
-#    def test_TC14_33(self):
-#        rtn = os.system('python ./src/file_access_control/TC14_33.py')
-##        self.assertEqual(rtn,0)
-  
+    """
+    예외 정책 테스트는 TC14_38 ~ TC14_60 으로 대체
+    def test_TC14_33(self):
+        rtn = os.system('python ./src/file_access_control/TC14_33.py')
+        self.assertEqual(rtn,0)
+    """
+
     def test_TC14_34(self):
         rtn = os.system('python ./src/file_access_control/TC14_34.py')
         self.assertEqual(rtn,0)
@@ -205,6 +208,7 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/file_access_control/TC14_36.py')
         self.assertEqual(rtn,0)
 
+    # TCP 제어
     def test_TC14_61(self):
         if os_platform == "Windows":
             os.system('start python src\\tcp_server.py 14610')
@@ -317,6 +321,7 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/tcp_connect_control/TC14_74.py')
         self.assertEqual(rtn,0)
 
+    # 프로세스 킬
     def test_TC14_75(self):
         if os_platform == "Windows":
             os.system('start test_process\\windows\\TC14_75_sleep.exe')
@@ -470,6 +475,7 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/process_kill_control/TC14_93.py')
         self.assertEqual(rtn,0)
     
+    # 권한상승 파일 통제
     def test_TC14_100(self):
         if os_platform == "Windows":
             self.skipTest("skip")
@@ -654,6 +660,7 @@ class TC_test(unittest.TestCase):
             rtn = os.system('python ./src/setuid_file_access_control/TC14_124.py')
             self.assertEqual(rtn,0)
 
+    # 포트 바인드
     def test_TC14_131(self):
         rtn = os.system('python ./src/port_bind_control/TC14_131.py')
         self.assertEqual(rtn,0)
@@ -738,3 +745,115 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/port_bind_control/TC14_153.py')
         self.assertEqual(rtn,0)
 
+    # udp 제어
+    def test_TC14_246(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14246')
+        else:
+            os.system('python ./src/udp_server.py 14246 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_246.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_247(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14247')
+        else:
+            os.system('python ./src/udp_server.py 14247 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_247.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_248(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14248')
+        else:
+            os.system('python ./src/udp_server.py 14248 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_248.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_249(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14249')
+        else:
+            os.system('python ./src/udp_server.py 14249 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_249.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_250(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14250')
+        else:
+            os.system('python ./src/udp_server.py 14250 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_250.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_251(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14251')
+        else:
+            os.system('python ./src/udp_server.py 14251 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_251.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_252(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14252')
+        else:
+            os.system('python ./src/udp_server.py 14252 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_252.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_253(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14253')
+        else:
+            os.system('python ./src/udp_server.py 14253 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_253.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_254(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14254')
+        else:
+            os.system('python ./src/udp_server.py 14254 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_254.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_255(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14255')
+        else:
+            os.system('python ./src/udp_server.py 14255 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_255.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_256(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14256')
+        else:
+            os.system('python ./src/udp_server.py 14256 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_256.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_257(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14257')
+        else:
+            os.system('python ./src/udp_server.py 14257 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_257.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_258(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14258')
+        else:
+            os.system('python ./src/udp_server.py 14258 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_258.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_259(self):
+        if os_platform == "Windows":
+            os.system('start python src\\udp_server.py 14259')
+        else:
+            os.system('python ./src/udp_server.py 14259 &')
+        rtn = os.system('python ./src/udp_connect_control/TC14_259.py')
+        self.assertEqual(rtn,0)
