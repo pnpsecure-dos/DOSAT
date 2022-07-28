@@ -19,11 +19,10 @@ bufferSize = 1024
 try:
     udp_client_socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
     udp_client_socket.sendto(send_msg, server_info)
-    msg_from_server = udp_client_socket.recvfrom(bufferSize)
-    msg = "Message from Server {}".format(msg_from_server[0])
-    print(msg)
 except Exception as e:
     print(e)
+
+udp_client_socket.close()
 
 sleep(1)
 
