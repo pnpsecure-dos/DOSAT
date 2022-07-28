@@ -22,6 +22,8 @@ try:
 except Exception as e:
     print(e)
 
+udp_client_socket.close()
+
 sleep(1)
 
 if logCheck(tc_num, os_platform) == policy_status:

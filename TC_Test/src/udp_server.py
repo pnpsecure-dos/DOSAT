@@ -1,3 +1,4 @@
+from http import server
 import socket
 import sys
 from variables import *
@@ -24,3 +25,5 @@ try:
 except socket.timeout:
     print("time out")
     pass
+
+server_socket.close()
