@@ -12,8 +12,6 @@ udp_server_socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 udp_server_socket.bind((host, port))
 udp_server_socket.settimeout(30)
 
-print("UDP server up")
-
 try:
     msg_from_client = udp_server_socket.recvfrom(bufferSize)
     message = msg_from_client[0]
