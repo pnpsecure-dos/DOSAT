@@ -14,7 +14,7 @@ now_dt = datetime.now()
 # cat
 os.system("cat /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num)
 
-sleep(0.5)
+sleep(1)
 
 if logCheck(tc_num, 'Posix') == policy_status:
     print("true")

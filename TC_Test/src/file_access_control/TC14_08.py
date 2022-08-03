@@ -17,7 +17,7 @@ if os_platform == "Windows" :
 else :
     os.system("cat /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num)
 
-sleep(0.5)
+sleep(1)
 
 if logCheck(tc_num, os_platform) == policy_status:
     print("true")
