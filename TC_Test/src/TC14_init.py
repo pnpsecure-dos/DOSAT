@@ -8,6 +8,7 @@ from variables import *
 
 os_platform = platform.system()
 dt = nowDate()
+log_tables = ["access_file", "etc_acl", "access_process", "bind_control", "setuid_file"]
 
 # change policy on/off depending on variables.policy_status
 
@@ -24,11 +25,11 @@ if policy_status == "DENY":
 	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_setuid))
 
 # delete log tables
-dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from access_file_%s;"%dt['day'])
-dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from etc_acl_%s;"%dt['day'])
-dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from access_process_%s;"%dt['day'])
-dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from bind_control_%s;"%dt['day'])
-dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from setuid_file_%s;"%dt['day'])
+for log_table in log_tables:
+    try:
+        dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from %s_%s;"%(log_table, dt['day']))
+    except:
+        print("%s doesn't exist"%log_table)
 
 
 # send to server_manager
@@ -47,7 +48,7 @@ else :
 # check conf file update
 while dt['time'] > ft and count < 150:
     if os_platform == "Windows" :
-        ft = time.ctime(os.path.getmtime("C:\\ProgramData\\PFC\\conf\\fac_auth.rules")).split()[3]
+        ft = time.ctime(os.path.getmtime(fac_auth_path)).split()[3]
     else :
         ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'" %pfc_path).read()
     sleep(1)
