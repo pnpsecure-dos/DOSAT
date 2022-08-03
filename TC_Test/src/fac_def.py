@@ -101,9 +101,9 @@ def logCheck(tc_num, os_platform):
                         if tc_num in pname :
                             status = True
                             pstatus = tmp_line[5].split(':')[1]
-                            break;
+                            break
                     if status == True :
-                        break;
+                        break
                 else :
                     fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
                     lines = fp.readlines()
@@ -113,12 +113,11 @@ def logCheck(tc_num, os_platform):
                         if tc_num in pname :
                             status = True
                             pstatus = tmp_line[5].split(':')[1]
-                            break;
+                            break
                     if status == True :
-                        break;
+                        break
             if status == True :
-                break;
-            sleep(0.1)
+                break
             count = count + 1
 
         return pstatus
