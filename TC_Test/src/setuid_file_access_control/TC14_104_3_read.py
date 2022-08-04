@@ -24,7 +24,7 @@ try:
 except Exception as e:
 	print(e)
 
-sleep(1)
+sleep(0.5)
 
 if logCheck(tc_num, 'Posix') == policy_status :
 	print("true")
@@ -35,7 +35,7 @@ else :
 
 os.system("cat /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num)
 
-sleep(1)
+sleep(0.5)
 
 if logCheck(tc_num, 'Posix') == policy_status :
 	print("true")

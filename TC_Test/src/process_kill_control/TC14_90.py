@@ -23,7 +23,7 @@ if os_platform == "Windows" :
 else :
     os.system("killall -9 %s_sleep"%tc_num)
 
-sleep(1)
+sleep(0.5)
 
 if logCheck(tc_num, os_platform) == policy_status:
     print("true")

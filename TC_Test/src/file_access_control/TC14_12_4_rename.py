@@ -26,7 +26,7 @@ else :
     os.system("mv /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s_re"%(tc_num,tc_num))
     os.system("mv /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s_re /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%(tc_num,tc_num))
 
-sleep(1)
+sleep(0.5)
 if logCheck(tc_num, os_platform) == policy_status :
 	print("true")
 	sys.exit(0)

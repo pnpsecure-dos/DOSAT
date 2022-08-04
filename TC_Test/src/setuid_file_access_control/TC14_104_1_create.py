@@ -18,7 +18,7 @@ try:
 except Exception as e:
 	print(e)
 	
-sleep(1)
+sleep(0.5)
 
 if logCheck(tc_num, 'Posix') == policy_status :
 	print("true")
