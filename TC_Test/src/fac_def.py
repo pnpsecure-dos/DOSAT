@@ -119,7 +119,7 @@ def logCheck(tc_num, os_platform):
             if status == True :
                 break
             sleep(1)
-            count = count + 1
+            count += 1
 
         return pstatus
         

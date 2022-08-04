@@ -8,21 +8,12 @@ from variables import *
 
 os_platform = platform.system()
 dt = nowDate()
-log_tables = ["access_file", "etc_acl", "access_process", "bind_control", "setuid_file"]
 
 # change policy on/off depending on variables.policy_status
-
-dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_fac))
-dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_tcp_ctrl))
-dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_pkill))
-dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_port_bind))
-dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%(tb_setuid))
-if policy_status == "DENY":
-	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_fac))
-	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_tcp_ctrl))
-	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_pkill))
-	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_port_bind))
-	dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%(tb_setuid))
+for policy_table in policy_tables:
+    dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%policy_table)
+    if policy_status == "DENY":
+        dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%policy_table)
 
 # delete log tables
 for log_table in log_tables:
@@ -30,7 +21,6 @@ for log_table in log_tables:
         dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from %s_%s;"%(log_table, dt['day']))
     except:
         print("%s doesn't exist"%log_table)
-
 
 # send to server_manager
 usock = skt.socket(skt.AF_INET, skt.SOCK_DGRAM)
@@ -53,5 +43,3 @@ while dt['time'] > ft and count < 150:
         ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'" %pfc_path).read()
     sleep(1)
     count +=1
-
-sleep(5)

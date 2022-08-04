@@ -15,6 +15,11 @@ class TC_test(unittest.TestCase):
     def tearDownClass(cls):
         print("")
     
+    # 시스템 제어
+    def test_TC00(self):
+        rtn = os.system('python ./src/gui.py')
+        self.assertEqual(rtn,0)
+
     # 파일 접근 통제
     def test_TC14_08(self):
         rtn = os.system('python ./src/file_access_control/TC14_08.py')
