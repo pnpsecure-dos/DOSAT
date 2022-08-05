@@ -45,6 +45,7 @@ if os_platform == "Windows" :
     sleep(1)
     pyautogui.click(x=280, y=960)
     sleep(2)
+    pyautogui.click(x=1, y=1)
 
     os.system("shutdown")
 
