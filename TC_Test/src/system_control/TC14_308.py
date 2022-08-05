@@ -30,7 +30,7 @@ if os_platform == "Windows" :
 
     for cmd in windows_time_cmd:
         try:
-            os.system("sudo %s"%cmd)
+            os.system("%s"%cmd)
         except:
             print("%s execute fail"%cmd)
         sleep(0.5)

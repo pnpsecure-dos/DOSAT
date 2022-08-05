@@ -51,7 +51,7 @@ if os_platform == "Windows" :
 else :
     for cmd in posix_shutdown_cmd:
         try:
-            os.system("sudo %s"%cmd)
+            os.system("%s"%cmd)
         except:
             print("%s execute fail"%cmd)
         sleep(0.5)
