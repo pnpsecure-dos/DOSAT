@@ -48,13 +48,13 @@ if os_platform == "Windows" :
     pyautogui.click(x=280, y=960)
     sleep(2)
     pyautogui.click(x=1, y=1)
-    
+
     os.system("shutdown")
 
 else :
     for cmd in posix_shutdown_cmd:
         try:
-            os.system("%s"%cmd)
+            os.system("sudo %s"%cmd)
         except:
             print("%s execute fail"%cmd)
         sleep(0.5)
