@@ -2,6 +2,7 @@ import unittest
 import os
 import platform
 from time import sleep
+from src import variables
 
 os_platform = platform.system()
 
@@ -14,11 +15,6 @@ class TC_test(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         print("")
-    
-    # 시스템 제어
-    def test_TC00(self):
-        rtn = os.system('python ./src/gui.py')
-        self.assertEqual(rtn,0)
 
     # 파일 접근 통제
     def test_TC14_08(self):
@@ -861,4 +857,47 @@ class TC_test(unittest.TestCase):
         else:
             os.system('python ./src/udp_server.py 14259 &')
         rtn = os.system('python ./src/udp_connect_control/TC14_259.py')
+        self.assertEqual(rtn,0)
+
+    # 시스템 제어
+    def test_TC14_288(self):
+        if variables.policy_status == "ALLOW":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/system_control/TC14_288.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_289(self):
+        if variables.policy_status == "ALLOW":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/system_control/TC14_289.py')
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_291(self):
+        if variables.policy_status == "ALLOW":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/system_control/TC14_291.py')
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_305(self):
+        if variables.policy_status == "ALLOW":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/system_control/TC14_305.py')
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_306(self):
+        if variables.policy_status == "ALLOW":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/system_control/TC14_306.py')
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_308(self):
+        if variables.policy_status == "ALLOW":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/system_control/TC14_308.py')
         self.assertEqual(rtn,0)
