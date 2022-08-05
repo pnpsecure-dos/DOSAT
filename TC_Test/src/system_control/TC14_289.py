@@ -1,4 +1,3 @@
-import pyautogui
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
@@ -13,6 +12,7 @@ tc_num = "TC14_288"
 posix_shutdown_cmd = ["init 0", "reboot", "shutdown", "poweroff", "halt"]
 
 if os_platform == "Windows" :
+    import pyautogui
     # 시작 메뉴에서 재시작 클릭
     pyautogui.click(x=1, y=1)
     sleep(0.5)
@@ -53,6 +53,7 @@ else :
             os.system("%s"%cmd)
         except:
             print("%s execute fail"%cmd)
+        sleep(0.5)
 
 sleep(0.5)
 

@@ -1,4 +1,3 @@
-import pyautogui
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
@@ -14,6 +13,7 @@ posix_time_cmd = ["rdate -s time.bora.net", "date -s '10:10:10'", "timedatectl s
 windows_time_cmd = ["date 22-08-03", "time 14:00:00"]
 
 if os_platform == "Windows" :
+    import pyautogui
     os.system("timedate.cpl")
     sleep(0.5)
     pyautogui.hotkey("altleft", "d")
@@ -32,6 +32,7 @@ if os_platform == "Windows" :
             os.system("%s"%cmd)
         except:
             print("%s execute fail"%cmd)
+        sleep(0.5)
 
     ''' ms-settings:dateandtime 으로 테스트 확인 ("자동으로 시간 설정" 해제하는 방법 찾아야 함)
     os.system('"c:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Run.lnk"')
@@ -50,6 +51,7 @@ else :
             os.system("%s"%cmd)
         except:
             print("%s execute fail"%cmd)
+        sleep(0.5)
 sleep(0.5)
 
 if logCheck(tc_num, os_platform) == policy_status:
