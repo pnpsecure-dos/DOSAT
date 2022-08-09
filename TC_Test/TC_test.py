@@ -15,7 +15,7 @@ class TC_test(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         print("")
-    """
+    
     # 파일 접근 통제
     def test_TC14_08(self):
         rtn = os.system('python ./src/file_access_control/TC14_08.py')
@@ -851,7 +851,7 @@ class TC_test(unittest.TestCase):
             os.system('python ./src/udp_server.py 14259 &')
         rtn = os.system('python ./src/udp_connect_control/TC14_259.py')
         self.assertEqual(rtn,0)
-    """
+    
     # 시스템 제어
     def test_TC14_288(self):
         if variables.policy_status == "ALLOW":
