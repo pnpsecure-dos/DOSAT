@@ -894,3 +894,138 @@ class TC_test(unittest.TestCase):
         else:
             rtn = os.system('python ./src/system_control/TC14_308.py')
         self.assertEqual(rtn,0)
+
+    # 윈도우 서비스 제어
+    
+    def test_TC14_309(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_309.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_310(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_310.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_311(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_311.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_312(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_312.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_313(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_313.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_314(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_314.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_315(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_315.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_316(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_316.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_317(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_317.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_318(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_318.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_319(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_319.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_320(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_320.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_321(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_321.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_324(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_324.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_325(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_325.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_326(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_326.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_327(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_327.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_328(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_328.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_329(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/windows_service_control/TC14_329.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
