@@ -20,7 +20,7 @@ for log_table in log_tables:
     try:
         dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from %s_%s;"%(log_table, dt['day']))
     except:
-        print("%s doesn't exist"%log_table)
+        print("%s_%s doesn't exist"%(log_table, dt['day']))
 
 # send to server_manager
 usock = skt.socket(skt.AF_INET, skt.SOCK_DGRAM)
@@ -43,3 +43,5 @@ while dt['time'] > ft and count < 150:
         ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'" %pfc_path).read()
     sleep(1)
     count +=1
+
+sleep(5)
