@@ -7,7 +7,7 @@ from fac_def import *
 from variables import *
 
 # file name without py
-tc_num = os.path.basename(__file__).split('.')[0]
+tc_num = sys.argv[1]
 password = "dbsafer00"
 cmd = "sudo useradd -p %s %s"%(password, tc_num)
 
@@ -23,12 +23,3 @@ except:
     print("pfc_su fail")
 
 os.system("sudo userdel %s"%tc_num)
-
-sleep(0.5)
-
-if logCheck(tc_num, 'Posix') == policy_status:
-    print("true")
-    sys.exit(0)
-else:
-    print("fail")
-    sys.exit(-1)

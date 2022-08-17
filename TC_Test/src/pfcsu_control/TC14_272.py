@@ -23,12 +23,3 @@ except:
     print("pfc_su fail")
 
 os.system("sudo userdel %s"%tc_num)
-
-sleep(0.5)
-
-if logCheck(tc_num, 'Posix') == policy_status:
-    print("true")
-    sys.exit(0)
-else:
-    print("fail")
-    sys.exit(-1)
