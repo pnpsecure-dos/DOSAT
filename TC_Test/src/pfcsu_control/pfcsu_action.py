@@ -9,9 +9,10 @@ from variables import *
 # file name without py
 tc_num = sys.argv[1]
 password = "dbsafer00"
-cmd = "sudo useradd -p %s %s"%(password, tc_num)
+useradd_cmd = "sudo useradd -p %s"%tc_num
+userdel_cmd = "sudo userdel -rf %s"%tc_num
 
-subprocess.call('echo {} | sudo -S {}'.format(password, cmd), shell=True)
+subprocess.call('echo {} | sudo -S {}'.format(password, useradd_cmd), shell=True)
 sleep(0.5)
 
 try:
@@ -22,4 +23,4 @@ try:
 except:
     print("pfc_su fail")
 
-os.system("sudo userdel %s"%tc_num)
+subprocess.call('echo {} | sudo -S {}'.format(password, userdel_cmd), shell=True)
