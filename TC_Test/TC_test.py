@@ -852,6 +852,98 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/udp_connect_control/TC14_259.py')
         self.assertEqual(rtn,0)
     
+    # 계정 변경
+    def test_TC14_260(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_260.py')
+            self.assertEqual(rtn,0)
+
+    def test_TC14_261(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_261.py')
+            self.assertEqual(rtn,0)
+
+    def test_TC14_262(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_262.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_263(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_263.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_264(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_264.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_265(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_265.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_266(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_266.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_267(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_267.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_268(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_268.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_271(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_271.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_272(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_272.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_273(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_273.py')
+            self.assertEqual(rtn,0)
+            
+    def test_TC14_274(self):
+        if os_platform == "Windows":
+            self.skipTest("skip")
+        else:
+            rtn = os.system('python ./src/pfcsu_control/TC14_274.py')
+            self.assertEqual(rtn,0)
+            
     # 시스템 제어
     def test_TC14_288(self):
         if variables.policy_status == "ALLOW":
