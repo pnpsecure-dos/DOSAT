@@ -28,7 +28,7 @@ if os.path.isfile(path):
 
 try:
 	f = open(path, 'w')
-	f.write("TC14_355 test file")
+	f.write("TC14_357 test file")
 	f.close()
 	sleep(0.5)
 	os.system("type %s"%path)
