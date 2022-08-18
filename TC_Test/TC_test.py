@@ -1128,3 +1128,25 @@ class TC_test(unittest.TestCase):
         else:
             self.skipTest("skip")
         self.assertEqual(rtn,0)
+
+    # 이동식 디스크 제어
+    def test_TC14_353(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/removale_disk_control/TC14_353.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_355(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/removale_disk_control/TC14_355.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_357(self):
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/removale_disk_control/TC14_357.py')
+        else:
+            self.skipTest("skip")
+        self.assertEqual(rtn,0)
