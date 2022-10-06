@@ -867,6 +867,7 @@ class TC_test(unittest.TestCase):
         else:
             for tc in pfcsu_tc_list:
                 os.system('python ./src/pfcsu_control/pfcsu_action.py %s'%tc)
+                sleep(2)
                 print("%s pass"%tc)
             sleep(120)
 
