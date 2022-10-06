@@ -23,7 +23,7 @@ class TC_test(unittest.TestCase):
         if os_platform != 'Windows':
             for tc in pfcsu_tc_list:
                 subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo userdel -rf %s"%tc), shell=True)
-    '''
+    
     # 파일 접근 통제
     def test_TC14_08(self):
         rtn = os.system('python ./src/file_access_control/TC14_08.py')
@@ -859,7 +859,7 @@ class TC_test(unittest.TestCase):
             os.system('python ./src/udp_server.py 14259 &')
         rtn = os.system('python ./src/udp_connect_control/TC14_259.py')
         self.assertEqual(rtn,0)
-    '''
+    
     # 계정 변경
     def test_TC14_260(self):
         if os_platform == "Windows" or variables.policy_status == "DENY":
@@ -957,7 +957,7 @@ class TC_test(unittest.TestCase):
         else:
             rtn = os.system('python ./src/pfcsu_control/pfcsu_log_check.py TC14_274')
             self.assertEqual(rtn,0)
-    '''
+    
     # 시스템 제어
     def test_TC14_288(self):
         if variables.policy_status == "ALLOW":
@@ -1157,4 +1157,4 @@ class TC_test(unittest.TestCase):
         else:
             self.skipTest("skip")
         self.assertEqual(rtn,0)
-    '''
+    
