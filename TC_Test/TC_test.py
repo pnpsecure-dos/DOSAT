@@ -3,18 +3,26 @@ import os
 import platform
 from time import sleep
 from src import variables
+import subprocess
 
 os_platform = platform.system()
+pfcsu_tc_list = ["TC14_260", "TC14_261", "TC14_262", "TC14_263", "TC14_264", "TC14_265", "TC14_266",
+                       "TC14_267", "TC14_268", "TC14_271", "TC14_272", "TC14_273", "TC14_274"]
 
 class TC_test(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        if os_platform != 'Windows':
+            for tc in pfcsu_tc_list:
+                subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo useradd %s"%tc), shell=True)
         os.system('python ./src/TC14_init.py')
 
     @classmethod
     def tearDownClass(cls):
-        print("")
+        if os_platform != 'Windows':
+            for tc in pfcsu_tc_list:
+                subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo userdel -rf %s"%tc), shell=True)
     
     # 파일 접근 통제
     def test_TC14_08(self):
@@ -857,9 +865,7 @@ class TC_test(unittest.TestCase):
         if os_platform == "Windows" or variables.policy_status == "DENY":
             self.skipTest("skip")
         else:
-            tc_list = ["TC14_260", "TC14_261", "TC14_262", "TC14_263", "TC14_264", "TC14_265", "TC14_266",
-                       "TC14_267", "TC14_268", "TC14_271", "TC14_272", "TC14_273", "TC14_274"]
-            for tc in tc_list:
+            for tc in pfcsu_tc_list:
                 os.system('python ./src/pfcsu_control/pfcsu_action.py %s'%tc)
             
             sleep(120)
