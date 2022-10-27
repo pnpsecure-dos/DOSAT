@@ -1,0 +1,25 @@
+- name: yum install test
+  hosts: LinuxServer
+
+  tasks:
+    - name: install apt
+#      vars:
+#        ansible_python_interpreter: /usr/bin/python
+      apt:
+        name:
+          - python3
+          - python3-pip
+        state:
+          latest
+
+    - name: install pip
+      vars:
+        ansible_python_interpreter: /usr/bin/python3
+      pip:
+        name:
+          - wheel
+          - setuptools_rust
+          - paramiko
+          - pymysql
+        state:
+          latest

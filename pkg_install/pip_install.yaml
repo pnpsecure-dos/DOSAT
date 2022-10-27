@@ -1,0 +1,12 @@
+- name: yum install test
+  hosts: LinuxServer
+
+  tasks:
+    - name: install pip
+      pip:
+        name:
+          - wheel
+          - setuptools_rust
+          - paramiko
+          - pymysql
+        state: latest
