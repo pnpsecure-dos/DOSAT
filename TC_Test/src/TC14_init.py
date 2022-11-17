@@ -14,6 +14,7 @@ for policy_table in policy_tables:
     dbExecute("dbsafer3","update %s set enabled=1 where name like 'TC%%';"%policy_table)
     if policy_status == "DENY":
         dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%policy_table)
+dbExecute("dbsafer3","update policy_file_bypass set enabled=1 where name like 'TC%%';")
 
 # delete log tables
 for log_table in log_tables:
