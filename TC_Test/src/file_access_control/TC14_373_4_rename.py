@@ -10,9 +10,9 @@ os_platform = platform.system()
 tc_num = os.path.basename(__file__).split('.')[0]
 
 if os_platform == "Windows" :
-    path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s\\%s"%(tc_num,tc_num)
+    path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%(tc_num,tc_num)
 else :
-    path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s/%s"%(tc_num,tc_num)
+    path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%(tc_num,tc_num)
 
 if os.path.isfile(path) == False:
 	f = open(path, 'w')

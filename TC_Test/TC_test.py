@@ -212,7 +212,7 @@ class TC_test(unittest.TestCase):
 
     # 파일 접근 통제 - bypass 정책
     def test_TC14_359(self):
-        rtn = os.system('python ./src/file_access_control/TC14_3869.py')
+        rtn = os.system('python ./src/file_access_control/TC14_359.py')
         self.assertEqual(rtn,0)
 
     def test_TC14_360(self):
