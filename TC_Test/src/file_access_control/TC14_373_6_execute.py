@@ -10,9 +10,9 @@ os_platform = platform.system()
 tc_num = os.path.basename(__file__).split('.')[0]
 
 if os_platform == "Windows" :
-    os.system("start C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s.exe"%(tc_num, tc_num))
+    os.system("start C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s.exe /t & taskkill /f /im %s.exe"%(tc_num, tc_num))
 else :
-    os.system("/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s.sh"%(tc_num, tc_num))
+    os.system("/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s.sh"%tc_num)
 
 sleep(0.5)
 if logCheck(tc_num, os_platform) == "ALLOW" :
