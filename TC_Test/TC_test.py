@@ -16,13 +16,14 @@ class TC_test(unittest.TestCase):
         if os_platform != 'Windows':
             for tc in pfcsu_tc_list:
                 subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo useradd %s"%tc), shell=True)
-        os.system('python ./src/TC14_init.py')
+        os.system('python ./src/TC14_setup.py')
 
     @classmethod
     def tearDownClass(cls):
         if os_platform != 'Windows':
             for tc in pfcsu_tc_list:
                 subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo userdel -rf %s"%tc), shell=True)
+        os.system('python ./src/TC14_teardown.py')
     
     # 파일 접근 통제
     def test_TC14_08(self):
