@@ -16,6 +16,7 @@ class TC_test(unittest.TestCase):
         if os_platform != 'Windows':
             for tc in pfcsu_tc_list:
                 subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo useradd %s"%tc), shell=True)
+            print("useradd finish")
         os.system('python ./src/TC14_setup.py')
 
     @classmethod
@@ -23,6 +24,7 @@ class TC_test(unittest.TestCase):
         if os_platform != 'Windows':
             for tc in pfcsu_tc_list:
                 subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo userdel -rf %s"%tc), shell=True)
+            print("userdel finish")
         os.system('python ./src/TC14_teardown.py')
     
     # 파일 접근 통제

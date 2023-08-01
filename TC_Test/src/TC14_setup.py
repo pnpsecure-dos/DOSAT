@@ -15,6 +15,7 @@ for policy_table in policy_tables:
     if policy_status == "DENY":
         dbExecute("dbsafer3", "update %s set enabled=0 where name like 'TC%%' and name like '%%allow';"%policy_table)
 dbExecute("dbsafer3","update policy_file_bypass set enabled=1 where name like 'TC%%';")
+print("policy DB change")
 
 # delete log tables
 for log_table in log_tables:
@@ -22,6 +23,7 @@ for log_table in log_tables:
         dbExecute("dbsafer_log_%s_%s"%(dt['year'], dt['month']),"delete from %s_%s;"%(log_table, dt['day']))
     except:
         print("%s_%s doesn't exist"%(log_table, dt['day']))
+print("policy log delete")
 
 # send to server_manager
 usock = skt.socket(skt.AF_INET, skt.SOCK_DGRAM)
