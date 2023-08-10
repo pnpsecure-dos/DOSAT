@@ -317,7 +317,6 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/file_access_control/TC14_383.py')
         self.assertEqual(rtn,0)
 
-
     # TCP 제어
     def test_TC14_61(self):
         if os_platform == "Windows":
@@ -1266,3 +1265,95 @@ class TC_test(unittest.TestCase):
             self.skipTest("skip")
         self.assertEqual(rtn,0)
     
+    #레지스트리 제어
+    def test_TC14_387(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_387')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_388(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_388')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_389(self):
+        rtn = os.system('python ./src/registry_control/registry_key_add_delete.py TC14_389')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_390(self):
+        rtn = os.system('python ./src/registry_control/registry_key_add_delete.py TC14_390')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_391(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_391')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_392(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_392')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_393(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_393')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_394(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_394')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_395(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_395')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_396(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_396')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_397(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_397')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_398(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_398')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_399(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_399')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_400(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_400')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_401(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_401')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_402(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_402')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_403(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_403')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_406(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_406')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_407(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_407')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_408(self):
+        rtn = os.system('python ./src/registry_control/TC14_408.py')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_409(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_409')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_410(self):
+        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_410')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_411(self):
+        rtn = os.system('python ./src/registry_control/TC14_411.py')
+        self.assertEqual(rtn,0)
