@@ -98,7 +98,7 @@ def logCheck(tc_num, os_platform):
                     lines = fp.readlines()
                     for line in lines :
                         tmp_line = line.split()
-                        pname = tmp_line[18].split(':')[1]
+                        pname = tmp_line[19].split(':')[1]
                         if tc_num in pname :
                             status = True
                             pstatus = tmp_line[5].split(':')[1]
