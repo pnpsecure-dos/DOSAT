@@ -33,17 +33,18 @@ ft = ''
 count = 0
 
 if os_platform == "Windows" :
-    fac_auth_path = "C:\\ProgramData\\PFC\\conf\\fac_auth.rules"
+    win_sa_path = "C:\\Program Files\\PNP SECURE\\NODESAFER\\conf"
 else :
-    pfc_path = os.popen('cat /etc/.pfcpath').read().split('=')[1]
-    pfc_path = pfc_path.strip('\n')
+    tmp_path = os.popen('cat /etc/.pfcpath').read().split('=')[1]
+    remove_path = "/addon/pfc"
+    sa_path = tmp_path[:-len(remove_path)].rstrip('/')
 
 # check conf file update
 while dt['time'] > ft and count < 150:
     if os_platform == "Windows" :
-        ft = time.ctime(os.path.getmtime(fac_auth_path)).split()[3]
+        ft = time.ctime(os.path.getmtime(win_sa_path)).split()[3]
     else :
-        ft = os.popen("ls -al %s/conf/fac_auth.rules | awk '{print $8}'" %pfc_path).read()
+        ft = os.popen("ls -al %s/conf/access.rules | awk '{print $8}'" %sa_path).read()
     sleep(1)
     count +=1
 
