@@ -1267,93 +1267,162 @@ class TC_test(unittest.TestCase):
     
     #레지스트리 제어
     def test_TC14_387(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_387')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_387')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_388(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_388')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_388')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_389(self):
-        rtn = os.system('python ./src/registry_control/registry_key_add_delete.py TC14_389')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_389')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_390(self):
-        rtn = os.system('python ./src/registry_control/registry_key_add_delete.py TC14_390')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_390')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_391(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_391')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_391')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_392(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_392')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_392')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_393(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_393')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_393')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_394(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_394')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_394')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_395(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_395')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_395')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_396(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_396')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_396')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_397(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_397')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_397')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_398(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_398')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_398')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_399(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_399')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_399')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_400(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_400')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_400')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_401(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_401')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_401')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_402(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_402')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_402')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_403(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_403')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_403')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_406(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_406')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_406')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_407(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_407')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_407')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_408(self):
-        rtn = os.system('python ./src/registry_control/TC14_408.py')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/TC14_408.py')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_409(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_409')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_409')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_410(self):
-        rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_410')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/registry_value_add_delete.py TC14_410')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
 
     def test_TC14_411(self):
-        rtn = os.system('python ./src/registry_control/TC14_411.py')
+        if os_platform == "Windows":
+            rtn = os.system('python ./src/registry_control/TC14_411.py')
+        else:
+            self.skipTest("skip")
         self.assertEqual(rtn,0)
