@@ -1,7 +1,7 @@
 import os
+import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 import socket
-import sys
 from variables import *
 
 host = jenkins_node.split(' ')[0]
