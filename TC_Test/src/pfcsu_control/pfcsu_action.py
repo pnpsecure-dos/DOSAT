@@ -24,3 +24,4 @@ except:
     print("pfc_su fail")
 
 #subprocess.call('echo {} | sudo -S {}'.format(password, userdel_cmd), shell=True)
+#test
