@@ -97,12 +97,12 @@ def logCheck(tc_num, os_platform):
                     fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
                     lines = fp.readlines()
                     for line in lines :
-                        print(line)
-                        tmp_line = line.split()
-                        pname = tmp_line[19].split(':')[1]
+                        act_match = re.search(r'ACT:(\w+)', line)
+                        pnm_match = re.search(r'PNM:(\w+)', line)
+                        pname = pnm_match.group(1)
                         if tc_num in pname :
                             status = True
-                            pstatus = tmp_line[5].split(':')[1]
+                            pstatus = act_match.group(1)
                             break
                     if status == True :
                         break
@@ -110,12 +110,12 @@ def logCheck(tc_num, os_platform):
                     fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
                     lines = fp.readlines()
                     for line in lines :
-                        print(line)
-                        tmp_line = line.split()
-                        pname = tmp_line[15].split(':')[1]
+                        act_match = re.search(r'ACT:(\w+)', line)
+                        pnm_match = re.search(r'PNM:(\w+)', line)
+                        pname = pnm_match.group(1)
                         if tc_num in pname :
                             status = True
-                            pstatus = tmp_line[5].split(':')[1]
+                            pstatus = act_match.group(1)
                             break
                     if status == True :
                         break
