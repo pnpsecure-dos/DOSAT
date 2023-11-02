@@ -97,6 +97,7 @@ def logCheck(tc_num, os_platform):
                     fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
                     lines = fp.readlines()
                     for line in lines :
+                        print(line)
                         tmp_line = line.split()
                         pname = tmp_line[19].split(':')[1]
                         if tc_num in pname :
@@ -109,6 +110,7 @@ def logCheck(tc_num, os_platform):
                     fp = open("C:\\ProgramData\\PFC\\data\\%s"%i, 'r', encoding='utf-16')
                     lines = fp.readlines()
                     for line in lines :
+                        print(line)
                         tmp_line = line.split()
                         pname = tmp_line[15].split(':')[1]
                         if tc_num in pname :
