@@ -9,7 +9,7 @@ from variables import *
 os_platform = platform.system()
 
 # file name without py
-tc_num = sys.argv[1]
+tc_num = os.path.basename(__file__).split('.')[0]
 
 os.system("reg add HKEY_LOCAL_MACHINE\SOFTWARE\TC_TEST_KEY /v %s /t REG_SZ /d 'TC_ATUO_TEST' /f"%tc_num)
 sleep(1)

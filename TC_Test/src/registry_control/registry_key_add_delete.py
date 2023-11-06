@@ -5,15 +5,16 @@ import platform
 from time import sleep
 from fac_def import *
 from variables import *
+import winreg
 
 os_platform = platform.system()
 
 # file name without py
 tc_num = sys.argv[1]
 
-os.system("reg add HKEY_LOCAL_MACHINE\SOFTWARE\TC_TEST_KEY\%s /f"%tc_num)
+winreg.CreateKey(winreg.HKEY_LOCAL_MACHINE, "SOFTWARE\\WOW6432Node\\TC_TEST_KEY\\%s"%tc_num)
 sleep(1)
-os.system("reg delete HKEY_LOCAL_MACHINE\SOFTWARE\TC_TEST_KEY\%s /f"%tc_num)
+winreg.DeleteKey(winreg.HKEY_LOCAL_MACHINE, "SOFTWARE\\WOW6432Node\\TC_TEST_KEY\\%s"%tc_num)
 sleep(0.5)
 
 if logCheck(tc_num, os_platform) == policy_status:

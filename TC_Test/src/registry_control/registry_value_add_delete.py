@@ -5,16 +5,24 @@ import platform
 from time import sleep
 from fac_def import *
 from variables import *
+import winreg
 
 os_platform = platform.system()
 
 # file name without py
 tc_num = sys.argv[1]
 
-os.system("reg add HKEY_LOCAL_MACHINE\SOFTWARE\TC_TEST_KEY /v %s /t REG_SZ /d 'TC_ATUO_TEST' /f"%tc_num)
-sleep(1)
-os.system("reg delete HKEY_LOCAL_MACHINE\SOFTWARE\TC_TEST_KEY /v %s /f"%tc_num)
-sleep(0.5)
+try:
+    reg_key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "SOFTWARE\\WOW6432Node\\TC_TEST_KEY", 0, winreg.KEY_SET_VALUE)
+except FileNotFoundError:
+    # 만약 해당 키가 없는 경우 새로운 키를 생성합니다.
+    reg_key = winreg.CreateKey(winreg.HKEY_LOCAL_MACHINE, "SOFTWARE\\WOW6432Node\\TC_TEST_KEY")
+
+# 값을 설정합니다.
+winreg.SetValueEx(reg_key, tc_num, 0, winreg.REG_SZ, tc_num)
+
+# 레지스트리 키를 닫습니다.
+winreg.CloseKey(reg_key)
 
 if logCheck(tc_num, os_platform) == policy_status:
 	print("true")
