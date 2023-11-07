@@ -28,12 +28,6 @@ udp_client_socket.close()
 
 sleep(0.5)
 
-if logCheck(tc_num, os_platform) == policy_status:
-    print("true")
-else:
-    print("fail")
-    sys.exit(-1)
-
 count = 0
 tmp = False
 

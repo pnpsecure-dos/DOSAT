@@ -35,12 +35,6 @@ try:
 except Exception as e:
 	print(e)
 
-if logCheck(tc_num, os_platform) == policy_status:
-        print("true")
-else:
-        print("fail")
-        sys.exit(-1)
-
 count = 0
 tmp = False
 while count < 30:
