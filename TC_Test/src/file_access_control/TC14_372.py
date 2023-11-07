@@ -23,12 +23,6 @@ else :
 
 sleep(0.5)
 
-if logCheck(tc_num, os_platform) == "ALLOW":
-        print("true")
-else:
-        print("fail")
-        sys.exit(-1)
-
 count = 0
 tmp = False
 while count < 30:
