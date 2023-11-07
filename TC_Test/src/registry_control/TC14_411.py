@@ -19,12 +19,10 @@ os.system("reg delete HKEY_LOCAL_MACHINE\SOFTWARE\TC_TEST_KEY /v %s /f"%tc_num)
 sleep(120)
 
 columns=["policy_name"]
-tc_list = ['TC14_08', 'TC14_09', 'TC14_10', 'TC14_11', 'TC14_12_1_create', 'TC14_12_2_write', 'TC14_12_3_read',
-            'TC14_12_4_rename', 'TC14_12_5_delete', 'TC14_12_6_execute', 'TC14_12_7_mkdir', 'TC14_12_8_rmdir',
-            'TC14_21', 'TC14_22', 'TC14_23', 'TC14_24', 'TC14_25', 'TC14_26', 'TC14_27', 'TC14_30', 'TC14_31',
-            'TC14_32', 'TC14_34', 'TC14_35', 'TC14_36', 'TC14_38', 'TC14_39', 'TC14_49', 'TC14_50', 'TC14_51',
-            'TC14_52', 'TC14_53', 'TC14_54', 'TC14_55', 'TC14_58', 'TC14_59', 'TC14_60', 'TC14_40_1_create',
-            'TC14_40_2_write', 'TC14_40_3_read', 'TC14_40_4_rename', 'TC14_40_5_delete', 'TC14_40_6_execute', 'TC14_40_7_mkdir', 'TC14_40_8_rmdir']
+tc_list = ['TC14_387', 'TC14_388', 'TC14_389', 'TC14_390', 'TC14_391', 'TC14_392', 'TC14_393',
+           'TC14_394', 'TC14_395', 'TC14_396', 'TC14_397', 'TC14_398', 'TC14_399', 'TC14_400',
+           'TC14_401', 'TC14_402', 'TC14_403', 'TC14_406', 'TC14_407', 'TC14_408', 'TC14_409',
+           'TC14_410', 'TC14_411']
 
 dt = nowDate()
 
