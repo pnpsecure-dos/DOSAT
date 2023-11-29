@@ -116,7 +116,7 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
  
     def test_TC14_32(self):
-        rtn = file_read('TC14_32')
+        rtn = file_alert('TC14_32')
         self.assertEqual(rtn,0)
 
     def test_TC14_34(self):
@@ -128,7 +128,7 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_36(self):
-        rtn = file_read('TC14_36')
+        rtn = file_log('TC14_36')
         self.assertEqual(rtn,0)
 
     def test_TC14_38(self):

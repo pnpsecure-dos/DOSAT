@@ -11,9 +11,15 @@ os_platform = platform.system()
 
 def file_read(tc_num):
     if os_platform == "Windows" :
-        path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s\\%s"%(tc_num,tc_num)
+        else:
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
     else :
-        path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s/%s"%(tc_num,tc_num)
+        else:
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
 
     if os.path.isfile(path) == False:
         f = open(path, 'w')
@@ -27,7 +33,7 @@ def file_read(tc_num):
     except Exception as e:
         print(e)
 
-    sleep(0.5)
+    sleep(1)
 
     if logCheck(tc_num, os_platform) == policy_status:
         print("true")
@@ -37,11 +43,11 @@ def file_read(tc_num):
         case1 = -1
 
     if os_platform == "Windows" :
-        os.system("type C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num)
+        os.system("type %s"%path)
     else :
-        os.system("cat /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num)
+        os.system("cat %s"%path)
 
-    sleep(0.5)
+    sleep(1)
 
     if logCheck(tc_num, os_platform) == policy_status:
         print("true")
@@ -59,16 +65,22 @@ def file_read(tc_num):
 
 def file_create(tc_num):
     if os_platform == "Windows" :
-        path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s\\%s"%(tc_num,tc_num)
+        else:
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
     else :
-        path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s/%s"%(tc_num,tc_num)
+        else:
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
 
     if os.path.isfile(path):
         os.remove(path)
 
     try:
         f = open(path, 'w')
-        f.write("TC14_12_1_create test file")
+        f.write("TC test file")
         f.close()
     except Exception as e:
         print(e)
@@ -86,13 +98,19 @@ def file_create(tc_num):
 
 def file_write(tc_num):
     if os_platform == "Windows" :
-        path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s\\%s"%(tc_num,tc_num)
+        else:
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
     else :
-        path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s/%s"%(tc_num,tc_num)
+        else:
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
 
     try:
         f = open(path, 'a')
-        f.write("TC14_12_2_write test file")
+        f.write("TC14 test file")
         f.close()
     except Exception as e:
         print(e)
@@ -110,21 +128,26 @@ def file_write(tc_num):
 
 def file_rename(tc_num):
     if os_platform == "Windows" :
-        path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s\\%s"%(tc_num,tc_num)
+        else:
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
     else :
-        path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s/%s"%(tc_num,tc_num)
+        else:
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
 
     if os.path.isfile(path) == False:
         f = open(path, 'w')
-        f.write("TC14_12_4_rename test file")
+        f.write("TC14 test file")
         f.close() 
 
     if os_platform == "Windows" :
-        os.system("rename C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s %s_re"%(tc_num,tc_num))
-        os.system("rename C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s_re %s"%(tc_num,tc_num))
+        os.system("rename %s %s_re"%(path,tc_num))
+        os.system("del %s_re"%path)
     else :
-        os.system("mv /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s_re"%(tc_num,tc_num))
-        os.system("mv /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s_re /home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%(tc_num,tc_num))
+        os.system("mv %s %s_re"%(path,path))
 
     sleep(0.5)
     
@@ -139,13 +162,19 @@ def file_rename(tc_num):
 
 def file_delete(tc_num):
     if os_platform == "Windows" :
-        path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s\\%s"%(tc_num,tc_num)
+        else:
+            path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
     else :
-        path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
+        if tc_num.startswith("TC14_40"):
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s/%s"%(tc_num,tc_num)
+        else:
+            path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
 
     if os.path.isfile(path) == False:
         f = open(path,'w')
-        f.write("TC14_12_5_delete test file")
+        f.write("TC14 test file")
         f.close()
     try:
         os.remove(path)
@@ -164,9 +193,15 @@ def file_delete(tc_num):
 
 def file_execute(tc_num):
     if os_platform == "Windows" :
-        os.system("start C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s.exe /t & taskkill /f /im %s.exe"%(tc_num, tc_num))
+        if tc_num.startswith("TC14_40"):
+            os.system("start C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s\\%s.exe/t & taskkill /f /im %s.exe"%(tc_num, tc_num))
+        else:
+            os.system("start C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s.exe /t & taskkill /f /im %s.exe"%(tc_num, tc_num))
     else :
-        os.system("/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s.sh"%tc_num)
+        if tc_num.startswith("TC14_40"):
+            os.system("/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s/%s.sh"%(tc_num, tc_num))
+        else:
+            os.system("/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s.sh"%tc_num)
 
     sleep(0.5)
 
