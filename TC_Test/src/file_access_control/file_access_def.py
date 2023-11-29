@@ -333,8 +333,9 @@ def file_log(tc_num):
             print("%s ok"%tc)
             continue
         else :
-            print("fail")
+            print("%s fail"%tc)
             result = -1
+            return result
 
     print("true")
     result = 0

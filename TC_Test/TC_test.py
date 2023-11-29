@@ -28,7 +28,7 @@ class TC_test(unittest.TestCase):
                 subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo userdel -rf %s"%tc), shell=True)
             print("userdel finish")
         os.system('python ./src/TC14_teardown.py')
-
+    #파일 접근 제어 - 기본, 예외 정책
     def test_TC14_08(self):
         rtn = file_read('TC14_08')
         self.assertEqual(rtn,0)
@@ -173,97 +173,93 @@ class TC_test(unittest.TestCase):
         rtn = file_rmdir('TC14_40_8_rmdir')
         self.assertEqual(rtn,0)
 
-"""
     def test_TC14_49(self):
-        rtn = os.system('python ./src/file_access_control/TC14_49.py')
+        rtn = file_read('TC14_49')
         self.assertEqual(rtn,0)
 
     def test_TC14_50(self):
-        rtn = os.system('python ./src/file_access_control/TC14_50.py')
+        rtn = file_read('TC14_50')
         self.assertEqual(rtn,0)
 
     def test_TC14_51(self):
-        rtn = os.system('python ./src/file_access_control/TC14_51.py')
+        rtn = file_read('TC14_51')
         self.assertEqual(rtn,0)
 
     def test_TC14_52(self):
-        rtn = os.system('python ./src/file_access_control/TC14_52.py')
+        rtn = file_read('TC14_52')
         self.assertEqual(rtn,0)
 
     def test_TC14_53(self):
-        rtn = os.system('python ./src/file_access_control/TC14_53.py')
+        rtn = file_read('TC14_53')
         self.assertEqual(rtn,0)
 
     def test_TC14_54(self):
-        rtn = os.system('python ./src/file_access_control/TC14_54.py')
+        rtn = file_read('TC14_54')
         self.assertEqual(rtn,0)
 
     def test_TC14_55(self):
-        rtn = os.system('python ./src/file_access_control/TC14_55.py')
+        rtn = file_read('TC14_55')
         self.assertEqual(rtn,0)
 
     def test_TC14_58(self):
-        rtn = os.system('python ./src/file_access_control/TC14_58.py')
+        rtn = file_read('TC14_58')
         self.assertEqual(rtn,0)
 
     def test_TC14_59(self):
-        rtn = os.system('python ./src/file_access_control/TC14_59.py')
+        rtn = file_read('TC14_59')
         self.assertEqual(rtn,0)
 
     def test_TC14_60(self):
-        rtn = os.system('python ./src/file_access_control/TC14_60.py')
+        rtn = file_read('TC14_60')
         self.assertEqual(rtn,0)
 
-    def test_TC14_60_36(self):
-        sleep(10)
-        rtn = os.system('python ./src/file_access_control/TC14_36.py')
-        self.assertEqual(rtn,0)
-    
-    # 파일 접근 통제 - bypass 정책
+    # 파일 접근 제어 - bypass 정책
     def test_TC14_359(self):
-        rtn = os.system('python ./src/file_access_control/TC14_359.py')
+        rtn = file_read('TC14_359')
         self.assertEqual(rtn,0)
 
     def test_TC14_360(self):
-        rtn = os.system('python ./src/file_access_control/TC14_360.py')
+        rtn = file_read('TC14_360')
         self.assertEqual(rtn,0)
 
     def test_TC14_361(self):
-        rtn = os.system('python ./src/file_access_control/TC14_361.py')
+        rtn = file_read('TC14_361')
         self.assertEqual(rtn,0)
 
     def test_TC14_362(self):
-        rtn = os.system('python ./src/file_access_control/TC14_362.py')
+        rtn = file_read('TC14_362')
         self.assertEqual(rtn,0)
 
     def test_TC14_363(self):
-        rtn = os.system('python ./src/file_access_control/TC14_363.py')
+        rtn = file_read('TC14_363')
         self.assertEqual(rtn,0)
 
     def test_TC14_364(self):
-        rtn = os.system('python ./src/file_access_control/TC14_364.py')
+        rtn = file_read('TC14_364')
         self.assertEqual(rtn,0)
 
     def test_TC14_365(self):
-        rtn = os.system('python ./src/file_access_control/TC14_365.py')
+        rtn = file_read('TC14_365')
         self.assertEqual(rtn,0)
 
     def test_TC14_366(self):
-        rtn = os.system('python ./src/file_access_control/TC14_366.py')
+        rtn = file_read('TC14_366')
         self.assertEqual(rtn,0)
 
     def test_TC14_367(self):
-        rtn = os.system('python ./src/file_access_control/TC14_367.py')
+        rtn = file_read('TC14_367')
         self.assertEqual(rtn,0)
 
     def test_TC14_368(self):
-        rtn = os.system('python ./src/file_access_control/TC14_368.py')
+        rtn = file_read('TC14_368')
         self.assertEqual(rtn,0)
 
     def test_TC14_369(self):
-        rtn = os.system('python ./src/file_access_control/TC14_369.py')
+        rtn = file_read('TC14_369')
         self.assertEqual(rtn,0)
 
+
+"""
     def test_TC14_372(self):
         rtn = os.system('python ./src/file_access_control/TC14_372.py')
         self.assertEqual(rtn,0)
