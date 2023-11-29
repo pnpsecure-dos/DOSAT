@@ -52,126 +52,128 @@ class TC_test(unittest.TestCase):
     def test_TC14_12_2_write(self):
         rtn = file_write('TC14_12_2_write')
         self.assertEqual(rtn,0)
-        
+
     def test_TC14_12_3_read(self):
         rtn = file_read('TC14_12_3_read')
         self.assertEqual(rtn,0)
-        
+
     def test_TC14_12_4_rename(self):
         rtn = file_rename('TC14_12_4_rename')
         self.assertEqual(rtn,0)
-        
+
     def test_TC14_12_5_delete(self):
         rtn = file_delete('TC14_12_5_delete')
         self.assertEqual(rtn,0)
-        
+
     def test_TC14_12_6_execute(self):
         if os_platform != 'Windows':
             os.system('chmod +x ./test_file/posix/TC14_12_6_execute.sh')
         rtn = file_execute('TC14_12_6_execute')
         self.assertEqual(rtn,0)
-        
+
     def test_TC14_12_7_mkdir(self):
         rtn = file_mkdir('TC14_12_7_mkdir')
         self.assertEqual(rtn,0)
-        
+
     def test_TC14_12_8_rmdir(self):
         rtn = file_rmdir('TC14_12_8_rmdir')
         self.assertEqual(rtn,0)
 
-
-       
-"""
     def test_TC14_21(self):
-        rtn = os.system('python ./src/file_access_control/TC14_21.py')
+        rtn = file_read('TC14_21')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_22(self):
-        rtn = os.system('python ./src/file_access_control/TC14_22.py')
+        rtn = file_read('TC14_22')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_23(self):
-        rtn = os.system('python ./src/file_access_control/TC14_23.py')
+        rtn = file_read('TC14_23')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_24(self):
-        rtn = os.system('python ./src/file_access_control/TC14_24.py')
+        rtn = file_read('TC14_24')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_25(self):
-        rtn = os.system('python ./src/file_access_control/TC14_25.py')
+        rtn = file_read('TC14_25')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_26(self):
-        rtn = os.system('python ./src/file_access_control/TC14_26.py')
+        rtn = file_read('TC14_26')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_27(self):
-        rtn = os.system('python ./src/file_access_control/TC14_27.py')
+        rtn = file_read('TC14_27')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_30(self):
-        rtn = os.system('python ./src/file_access_control/TC14_30.py')
+        rtn = file_read('TC14_30')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_31(self):
-        rtn = os.system('python ./src/file_access_control/TC14_31.py')
+        rtn = file_read('TC14_31')
         self.assertEqual(rtn,0)
-
+ 
     def test_TC14_32(self):
-        rtn = os.system('python ./src/file_access_control/TC14_32.py')
+        rtn = file_read('TC14_32')
         self.assertEqual(rtn,0)
 
     def test_TC14_34(self):
-        rtn = os.system('python ./src/file_access_control/TC14_34.py')
+        rtn = file_read('TC14_34')
         self.assertEqual(rtn,0)
-  
+
     def test_TC14_35(self):
-        rtn = os.system('python ./src/file_access_control/TC14_35.py')
+        rtn = file_read('TC14_35')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_36(self):
+        rtn = file_read('TC14_36')
         self.assertEqual(rtn,0)
 
     def test_TC14_38(self):
-        rtn = os.system('python ./src/file_access_control/TC14_38.py')
+        rtn = file_read('TC14_38')
         self.assertEqual(rtn,0)
 
     def test_TC14_39(self):
-        rtn = os.system('python ./src/file_access_control/TC14_39.py')
+        rtn = file_read('TC14_39')
         self.assertEqual(rtn,0)
 
     def test_TC14_40_1_create(self):
-        rtn = os.system('python ./src/file_access_control/TC14_40_1_create.py')
+        rtn = file_create('TC14_40_1_create')
         self.assertEqual(rtn,0)
 
     def test_TC14_40_2_write(self):
-        rtn = os.system('python ./src/file_access_control/TC14_40_2_write.py')
+        rtn = file_write('TC14_40_2_write')
         self.assertEqual(rtn,0)
 
     def test_TC14_40_3_read(self):
-        rtn = os.system('python ./src/file_access_control/TC14_40_3_read.py')
+        rtn = file_read('TC14_40_3_read')
         self.assertEqual(rtn,0)
 
     def test_TC14_40_4_rename(self):
-        rtn = os.system('python ./src/file_access_control/TC14_40_4_rename.py')
+        rtn = file_rename('TC14_40_4_rename')
         self.assertEqual(rtn,0)
 
     def test_TC14_40_5_delete(self):
-        rtn = os.system('python ./src/file_access_control/TC14_40_5_delete.py')
+        rtn = file_delete('TC14_40_5_delete')
         self.assertEqual(rtn,0)
 
     def test_TC14_40_6_execute(self):
         if os_platform != 'Windows':
-            os.system('chmod +x ./test_file/posix/TC14_40_6_execute/TC14_40_6_execute.sh')
-        rtn = os.system('python ./src/file_access_control/TC14_40_6_execute.py')
+            os.system('chmod +x ./test_file/posix/TC14_40_6_execute.sh')
+        rtn = file_execute('TC14_40_6_execute')
         self.assertEqual(rtn,0)
 
     def test_TC14_40_7_mkdir(self):
-        rtn = os.system('python ./src/file_access_control/TC14_40_7_mkdir.py')
+        rtn = file_mkdir('TC14_40_7_mkdir')
         self.assertEqual(rtn,0)
 
     def test_TC14_40_8_rmdir(self):
-        rtn = os.system('python ./src/file_access_control/TC14_40_8_rmdir.py')
+        rtn = file_rmdir('TC14_40_8_rmdir')
         self.assertEqual(rtn,0)
 
+"""
     def test_TC14_49(self):
         rtn = os.system('python ./src/file_access_control/TC14_49.py')
         self.assertEqual(rtn,0)
