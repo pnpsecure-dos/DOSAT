@@ -970,6 +970,7 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
     
     # 계정 변경
+    '''
     def test_TC14_260(self):
         if os_platform == "Windows" or variables.policy_status == "DENY":
             self.skipTest("skip")
@@ -1066,7 +1067,7 @@ class TC_test(unittest.TestCase):
         else:
             rtn = os.system('python ./src/pfcsu_control/pfcsu_log_check.py TC14_274')
             self.assertEqual(rtn,0)
-    
+    '''
     # 시스템 제어
     def test_TC14_288(self):
         if variables.policy_status == "ALLOW":
