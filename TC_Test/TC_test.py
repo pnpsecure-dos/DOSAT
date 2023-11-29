@@ -127,7 +127,7 @@ class TC_test(unittest.TestCase):
         rtn = file_read('TC14_35')
         self.assertEqual(rtn,0)
 
-    def test_TC14_36(self):
+    def test_TC14_61_36(self):
         rtn = file_log('TC14_36')
         self.assertEqual(rtn,0)
 
@@ -161,7 +161,7 @@ class TC_test(unittest.TestCase):
 
     def test_TC14_40_6_execute(self):
         if os_platform != 'Windows':
-            os.system('chmod +x ./test_file/posix/TC14_40_6_execute.sh')
+            os.system('chmod +x ./test_file/posix/TC14_40_6_execute/TC14_40_6_execute.sh')
         rtn = file_execute('TC14_40_6_execute')
         self.assertEqual(rtn,0)
 

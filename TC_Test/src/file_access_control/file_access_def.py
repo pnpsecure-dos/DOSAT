@@ -11,12 +11,12 @@ os_platform = platform.system()
 
 def file_read(tc_num):
     if os_platform == "Windows" :
-        if tc_num.startswith("TC14_40"):
+        if 38 <= tc_num.split('_')[1] <=60:
             path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s\\%s"%(tc_num,tc_num)
         else:
             path = "C:\\jenkins\\sharedspace\\DBSAFER_OS\\TC_Test\\test_file\\windows\\%s"%tc_num
     else :
-        if tc_num.startswith("TC14_40"):
+        if 38 <= tc_num.split('_')[1] <=60:
             path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s/%s"%(tc_num,tc_num)
         else:
             path = "/home/jenkins/sharedspace/DBSAFER_OS/TC_Test/test_file/posix/%s"%tc_num
