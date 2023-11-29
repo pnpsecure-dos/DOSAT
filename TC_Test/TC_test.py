@@ -127,7 +127,7 @@ class TC_test(unittest.TestCase):
         rtn = file_read('TC14_35')
         self.assertEqual(rtn,0)
 
-    def test_TC14_61_36(self):
+    def test_TC14_60_36(self):
         rtn = file_log('TC14_36')
         self.assertEqual(rtn,0)
 
