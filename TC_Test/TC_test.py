@@ -258,6 +258,44 @@ class TC_test(unittest.TestCase):
         rtn = file_read('TC14_369')
         self.assertEqual(rtn,0)
 
+    def test_TC14_372(self):
+        rtn = file_alert('TC14_372')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_373_1_create(self):
+        rtn = file_create('TC14_373_1_create')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_373_2_write(self):
+        rtn = file_write('TC14_373_2_write')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_373_3_read(self):
+        rtn = file_read('TC14_373_3_read')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_373_4_rename(self):
+        rtn = file_rename('TC14_373_4_rename')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_373_5_delete(self):
+        rtn = file_delete('TC14_373_5_delete')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_373_6_execute(self):
+        if os_platform != 'Windows':
+            os.system('chmod +x ./test_file/posix/TC14_373_6_execute.sh')
+        rtn = file_execute('TC14_40_6_execute')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_373_7_mkdir(self):
+        rtn = file_mkdir('TC14_373_7_mkdir')
+        self.assertEqual(rtn,0)
+
+    def test_TC14_373_8_rmdir(self):
+        rtn = file_rmdir('TC14_373_8_rmdir')
+        self.assertEqual(rtn,0)
+
 
 """
     def test_TC14_372(self):
