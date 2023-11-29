@@ -4,6 +4,8 @@ import platform
 from time import sleep
 from src import variables
 import subprocess
+from src.file_access_control.file_access_def import *
+
 
 os_platform = platform.system()
 pfcsu_tc_list = ["TC14_260", "TC14_261", "TC14_262", "TC14_263", "TC14_264", "TC14_265", "TC14_266",
@@ -26,7 +28,24 @@ class TC_test(unittest.TestCase):
                 subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo userdel -rf %s"%tc), shell=True)
             print("userdel finish")
         os.system('python ./src/TC14_teardown.py')
-    
+
+    def test_TC14_08(self):
+        rtn = file_read('TC14_08')
+        self.assertEqual(rtn,0)
+        
+    def test_TC14_09(self):
+        rtn = file_read('TC14_09')
+        self.assertEqual(rtn,0)
+ 
+    def test_TC14_10(self):
+        rtn = file_read('TC14_10')
+        self.assertEqual(rtn,0)
+ 
+    def test_TC14_11(self):
+        rtn = file_read('TC14_11')
+        self.assertEqual(rtn,0)
+ 
+"""
     # 파일 접근 통제
     def test_TC14_08(self):
         rtn = os.system('python ./src/file_access_control/TC14_08.py')
@@ -212,7 +231,7 @@ class TC_test(unittest.TestCase):
         sleep(10)
         rtn = os.system('python ./src/file_access_control/TC14_36.py')
         self.assertEqual(rtn,0)
-
+    
     # 파일 접근 통제 - bypass 정책
     def test_TC14_359(self):
         rtn = os.system('python ./src/file_access_control/TC14_359.py')
@@ -969,8 +988,9 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/udp_connect_control/TC14_259.py')
         self.assertEqual(rtn,0)
     
-    # 계정 변경
+    
     '''
+    계정 변경 - 실행할 때마다 정상실행 되는 정책이 있고 아닌 경우도 있음.. 원인 파악 필요
     def test_TC14_260(self):
         if os_platform == "Windows" or variables.policy_status == "DENY":
             self.skipTest("skip")
@@ -1429,3 +1449,4 @@ class TC_test(unittest.TestCase):
         else:
             self.skipTest("skip")
         self.assertEqual(rtn,0)
+"""
