@@ -49,7 +49,7 @@ def file_read(tc_num):
         print("fail")
         case2 = -1
 
-    if case1 and case2:
+    if case1 == 0 and case2 == 0:
         result = 0
     else:
         result = -1
