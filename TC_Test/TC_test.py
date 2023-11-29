@@ -45,13 +45,20 @@ class TC_test(unittest.TestCase):
         rtn = file_read('TC14_11')
         self.assertEqual(rtn,0)
  
-    def test_TC14_11(self):
+    def test_TC14_12_1_create(self):
         rtn = file_create('TC14_12_1_create')
         self.assertEqual(rtn,0)
 
-    def test_TC14_11(self):
+    def test_TC14_12_2_write(self):
         rtn = file_write('TC14_12_2_write')
         self.assertEqual(rtn,0)
+        
+    def test_TC14_12_3_read(self):
+        rtn = file_read('TC14_12_3_read')
+        self.assertEqual(rtn,0)
+
+
+       
 """
     # 파일 접근 통제
     def test_TC14_08(self):
