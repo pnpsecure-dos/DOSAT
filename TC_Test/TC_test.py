@@ -285,7 +285,7 @@ class TC_test(unittest.TestCase):
     def test_TC14_373_6_execute(self):
         if os_platform != 'Windows':
             os.system('chmod +x ./test_file/posix/TC14_373_6_execute.sh')
-        rtn = file_execute('TC14_40_6_execute')
+        rtn = file_execute('TC14_373_6_execute')
         self.assertEqual(rtn,0)
 
     def test_TC14_373_7_mkdir(self):
