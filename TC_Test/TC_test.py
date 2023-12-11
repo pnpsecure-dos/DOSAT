@@ -128,7 +128,7 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
 
     def test_TC14_60_36(self):
-        rtn = file_log('TC14_36')
+        rtn = file_log_TC14_36('TC14_36')
         self.assertEqual(rtn,0)
 
     def test_TC14_38(self):
@@ -296,67 +296,27 @@ class TC_test(unittest.TestCase):
         rtn = file_rmdir('TC14_373_8_rmdir')
         self.assertEqual(rtn,0)
 
-
-"""
-    def test_TC14_372(self):
-        rtn = os.system('python ./src/file_access_control/TC14_372.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_373_1_create(self):
-        rtn = os.system('python ./src/file_access_control/TC14_373_1_create.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_373_2_write(self):
-        rtn = os.system('python ./src/file_access_control/TC14_373_2_write.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_373_3_read(self):
-        rtn = os.system('python ./src/file_access_control/TC14_373_3_read.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_373_4_rename(self):
-        rtn = os.system('python ./src/file_access_control/TC14_373_4_rename.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_373_5_delete(self):
-        rtn = os.system('python ./src/file_access_control/TC14_373_5_delete.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_373_6_execute(self):
-        if os_platform != 'Windows':
-            os.system('chmod +x ./test_file/posix/TC14_373_6_execute.sh')
-        rtn = os.system('python ./src/file_access_control/TC14_373_6_execute.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_373_7_mkdir(self):
-        rtn = os.system('python ./src/file_access_control/TC14_373_7_mkdir.py')
-        self.assertEqual(rtn,0)
-
-    def test_TC14_373_8_rmdir(self):
-        rtn = os.system('python ./src/file_access_control/TC14_373_8_rmdir.py')
-        self.assertEqual(rtn,0)
-		
     def test_TC14_381(self):
-        rtn = os.system('python ./src/file_access_control/TC14_381.py')
+        rtn = file_read('TC14_381')
         self.assertEqual(rtn,0)
 
     def test_TC14_382(self):
-        rtn = os.system('python ./src/file_access_control/TC14_382.py')
+        rtn = file_read('TC14_382')
         self.assertEqual(rtn,0)
 
     def test_TC14_385(self):
-        rtn = os.system('python ./src/file_access_control/TC14_385.py')
+        rtn = file_read('TC14_385')
         self.assertEqual(rtn,0)
   
     def test_TC14_386(self):
-        rtn = os.system('python ./src/file_access_control/TC14_386.py')
+        rtn = file_read('TC14_386')
         self.assertEqual(rtn,0)
 		
     def test_TC14_386_383(self):
         sleep(10)
-        rtn = os.system('python ./src/file_access_control/TC14_383.py')
+        rtn = file_log_TC14_383('TC14_383')
         self.assertEqual(rtn,0)
-
+"""
     # TCP 제어
     def test_TC14_61(self):
         if os_platform == "Windows":
