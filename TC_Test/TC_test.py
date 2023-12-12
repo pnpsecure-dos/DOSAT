@@ -329,6 +329,12 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
         await task
 
+    async def test_TC14_62(self):
+        task = asyncio.create_task(tcp_server(14620))
+        await asyncio.sleep(1)
+        rtn = tcp_con('TC14_61', 14620)
+        self.assertEqual(rtn,0)
+        await task
 """
 
     def test_TC14_61(self):
