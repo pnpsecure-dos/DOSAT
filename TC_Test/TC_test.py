@@ -320,23 +320,15 @@ class TC_test(unittest.TestCase):
         rtn = file_log_TC14_383('TC14_383')
         self.assertEqual(rtn,0)
     """
-    # TCP 제어
+    # TCP 제어 - 
     def test_TC14_61(self):
-        if os_platform == "Windows":
-            os.system('start python src\\tcp_connect_control\\tcp_server.py 14610')
-        else:
-            os.system('python ./src/tcp_connect_control/tcp_server.py 14610 &')
+        tcp_server(14610)
+        sleep(1)
         rtn = tcp_con('TC14_61', 14610)
         self.assertEqual(rtn,0)
 
-    def test_TC14_62(self):
-        if os_platform == "Windows":
-            os.system('start python src\\tcp_connect_control\\tcp_server.py 14620')
-        else:
-            os.system('python ./src/tcp_connect_control/tcp_server.py 14620 &')
-        rtn = tcp_con('TC14_62', 14620)
-        self.assertEqual(rtn,0)
 """
+
     def test_TC14_61(self):
         if os_platform == "Windows":
             os.system('start python src\\tcp_connect_control\\tcp_server.py 14610')

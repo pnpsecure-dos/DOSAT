@@ -10,7 +10,6 @@ from variables import *
 os_platform = platform.system()
 
 def tcp_con(tc_num, port):
-
     host = jenkins_node.split(' ')[0]
 
     try:
@@ -31,3 +30,25 @@ def tcp_con(tc_num, port):
         result = -1
 
     return result
+
+def tcp_server(port):
+    host = jenkins_node.split(' ')[0]
+
+    server_socket = socket(AF_INET, SOCK_STREAM)
+    server_socket.settimeout(30)
+    server_socket.bind((host,port))
+    server_socket.listen()
+
+    try:
+        client_socket, client_addr = server_socket.accept()
+        msg = client_socket.recv(1024)
+        client_socket.sendall("ok".encode())
+        client_socket.close()
+
+    except KeyboardInterrupt:
+        raise KeyboardInterrupt
+
+    except socket.timeout:
+        pass
+
+    server_socket.close()
