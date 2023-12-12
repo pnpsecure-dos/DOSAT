@@ -11,8 +11,6 @@ os_platform = platform.system()
 
 def tcp_con(tc_num, port):
 
-    tc_num = os.path.basename(__file__).split('.')[0]
-
     host = jenkins_node.split(' ')[0]
 
     try:
