@@ -329,6 +329,13 @@ class TC_test(unittest.TestCase):
         rtn = tcp_con('TC14_61', 14610)
         self.assertEqual(rtn,0)
 
+    def test_TC14_62(self):
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_connect_control\\tcp_server.py 14620')
+        else:
+            os.system('python ./src/tcp_connect_control/tcp_server.py 14620 &')
+        rtn = tcp_con('TC14_62', 14620)
+        self.assertEqual(rtn,0)
 """
     def test_TC14_61(self):
         if os_platform == "Windows":
