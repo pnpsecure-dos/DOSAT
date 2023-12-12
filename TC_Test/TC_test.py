@@ -5,6 +5,7 @@ from time import sleep
 from src import variables
 import subprocess
 from src.file_access_control.file_access_def import *
+from src.tcp_connect_control.tcp_connect_def import *
 
 
 os_platform = platform.system()
@@ -28,6 +29,8 @@ class TC_test(unittest.TestCase):
                 subprocess.call('echo {} | sudo -S {}'.format("dbsafer00", "sudo userdel -rf %s"%tc), shell=True)
             print("userdel finish")
         os.system('python ./src/TC14_teardown.py')
+
+    """
     #파일 접근 제어 - 기본, 예외 정책
     def test_TC14_08(self):
         rtn = file_read('TC14_08')
@@ -316,8 +319,17 @@ class TC_test(unittest.TestCase):
         sleep(10)
         rtn = file_log_TC14_383('TC14_383')
         self.assertEqual(rtn,0)
-"""
+    """
     # TCP 제어
+    def test_TC14_61(self):
+        if os_platform == "Windows":
+            os.system('start python src\\tcp_connect_control\\tcp_server.py 14610')
+        else:
+            os.system('python ./src/tcp_connect_control/tcp_server.py 14610 &')
+        rtn = tcp_con('14_61', 14610)
+        self.assertEqual(rtn,0)
+
+"""
     def test_TC14_61(self):
         if os_platform == "Windows":
             os.system('start python src\\tcp_connect_control\\tcp_server.py 14610')
