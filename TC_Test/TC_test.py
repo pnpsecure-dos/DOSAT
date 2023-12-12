@@ -1,6 +1,7 @@
 import unittest
 import os
 import platform
+import asyncio
 from time import sleep
 from src import variables
 import subprocess
@@ -321,11 +322,12 @@ class TC_test(unittest.TestCase):
         self.assertEqual(rtn,0)
     """
     # TCP 제어 - 
-    def test_TC14_61(self):
-        tcp_server(14610)
-        sleep(1)
+    async def test_TC14_61(self):
+        task = asyncio.create_task(tcp_server(14610))
+        await asyncio.sleep(1)
         rtn = tcp_con('TC14_61', 14610)
         self.assertEqual(rtn,0)
+        await task
 
 """
 
