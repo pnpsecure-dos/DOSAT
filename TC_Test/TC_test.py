@@ -326,7 +326,7 @@ class TC_test(unittest.TestCase):
             os.system('start python src\\tcp_connect_control\\tcp_server.py 14610')
         else:
             os.system('python ./src/tcp_connect_control/tcp_server.py 14610 &')
-        rtn = tcp_con('14_61', 14610)
+        rtn = tcp_con('TC14_61', 14610)
         self.assertEqual(rtn,0)
 
 """
