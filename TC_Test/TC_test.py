@@ -31,7 +31,7 @@ class TC_test(unittest.TestCase):
             print("userdel finish")
         os.system('python ./src/TC14_teardown.py')
 
-    """
+
     #파일 접근 제어 - 기본, 예외 정책
     def test_TC14_08(self):
         rtn = file_read('TC14_08')
@@ -320,7 +320,7 @@ class TC_test(unittest.TestCase):
         sleep(10)
         rtn = file_log_TC14_383('TC14_383')
         self.assertEqual(rtn,0)
-    """
+
     # TCP 제어 - 
     def test_TC14_61(self):
         task = asyncio.create_task(tcp_server(14610))
@@ -331,7 +331,7 @@ class TC_test(unittest.TestCase):
         task = asyncio.create_task(tcp_server(14620))
         rtn = tcp_con('TC14_61', 14620)
         self.assertEqual(rtn,0)
-"""
+
 
     def test_TC14_61(self):
         if os_platform == "Windows":
@@ -445,6 +445,7 @@ class TC_test(unittest.TestCase):
         rtn = os.system('python ./src/tcp_connect_control/TC14_74.py')
         self.assertEqual(rtn,0)
 
+    """
     # 프로세스 킬
     def test_TC14_75(self):
         if os_platform == "Windows":
@@ -868,6 +869,7 @@ class TC_test(unittest.TestCase):
     def test_TC14_153(self):
         rtn = os.system('python ./src/port_bind_control/TC14_153.py')
         self.assertEqual(rtn,0)
+    """
 
     # udp 제어
     def test_TC14_246(self):
@@ -909,6 +911,7 @@ class TC_test(unittest.TestCase):
             os.system('python ./src/udp_connect_control/udp_server.py 14250 &')
         rtn = os.system('python ./src/udp_connect_control/TC14_250.py')
         self.assertEqual(rtn,0)
+
     '''
     UDP 제어에서 프로세스 명을 획득하지 못해서 주석 처리
     프로세스 명 획득 가능하도록 개선 후 활성화 필요
@@ -983,7 +986,7 @@ class TC_test(unittest.TestCase):
             os.system('python ./src/udp_connect_control/udp_server.py 14259 &')
         rtn = os.system('python ./src/udp_connect_control/TC14_259.py')
         self.assertEqual(rtn,0)
-    
+
     
     '''
     계정 변경 - 실행할 때마다 정상실행 되는 정책이 있고 아닌 경우도 있음.. 원인 파악 필요
@@ -1083,6 +1086,7 @@ class TC_test(unittest.TestCase):
         else:
             rtn = os.system('python ./src/pfcsu_control/pfcsu_log_check.py TC14_274')
             self.assertEqual(rtn,0)
+    '''
     '''
     # 시스템 제어
     def test_TC14_288(self):
@@ -1445,4 +1449,4 @@ class TC_test(unittest.TestCase):
         else:
             self.skipTest("skip")
         self.assertEqual(rtn,0)
-"""
+    '''
